@@ -24,7 +24,7 @@
     "bootstrap": "^4.4.1",
     "chart.js": "^2.9.3",
     "flex-grid": "^0.2.5",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lozad": "^1.14.0",
     "ngx-cookie-service": "^2.3.0",
     "ngx-owl-carousel": "^2.0.7",
