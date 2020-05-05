@@ -1,0 +1,35 @@
+{
+    "data": [
+           
+        {
+            "id":"samo123r45e",
+            "username":"onomzzzy@gmail.com",
+            "password":"onome12345",
+            "firstname":"Samuel",
+            "lastname":"Onome",
+            "pix":"../../assets/images/users/jesse.jpg",
+            "role":"USER",
+            "address":"20 David Street Ojo Lagos",
+            "phoneno":"09056784325",
+            "whatsapp":"08067543261"
+        },
+
+        {
+            "id":"emma123e",
+            "username":"raywaxy@gmail.com",
+            "password":"ray12345",
+            "firstname":"Emmanuel",
+            "lastname":"Ovie",
+            "pix":"../../assets/images/users/saul.jpg",
+            "role":"USER",
+            "address":"20 Ebolobi Street Apapa Lagos",
+            "phoneno":"07156780325",
+            "whatsapp":"09011232610"
+        }
+
+
+
+    ]
+
+    }
+

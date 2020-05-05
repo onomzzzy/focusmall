@@ -1,0 +1,86 @@
+<div class="page">
+
+    <!--Carosel-->
+    <div class="carosel_view">
+        <div id="storecarosel" class="carousel slide carousel-fade" data-ride="carousel">
+
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="{{pixs}}" class="d-block w-100">
+                  </div>
+                </div>
+              </div>
+
+
+</div>
+ <!--Carosel-->
+
+
+ <!--Content-->
+<div class="product">
+ <div class="p-col-12">
+
+    <div class="p-grid">
+
+        <div class="p-col-12">
+        <div class="jumbotron">
+            <h1 class="display-5 desk_offer">Amazing Offer !!!</h1>
+            <h3 class="display-5 mobile_offer">Amazing Offer !!!</h3>
+            <p class="lead">{{offerText}}</p>
+            <hr class="my-4">
+            <p *ngIf="offerItem.length > 0">Offer is exclusive to Focus Mall.</p>
+            <p *ngIf="offerItem.length == 0">We current out of stock...</p>
+          </div>
+          </div>
+
+          <div class="p-col-12">
+
+            <div class="container-fluid">
+                <div class="row no-gutters">
+                  <div *ngFor="let offer of offerItem" class="col-6 col-sm-4 col-md-4 col-lg-3 d-flex">
+                    <div (click)="onClickItem(offer)" class="card mb-2">
+                      <img class="card-img-top" src="{{offer.picture[0]}}" alt="">
+                      <div class="card-body">
+                        <h6 class="card-title">{{offer.title | shortTitle:1}}</h6>
+                        <!--Discount-->
+                        <div *ngIf="offer.discount > 0">
+                          <div class="p-grid">
+                            <div class="p-col-8">
+                              <h6 class="card-text">{{offer.newprice | currency:'NGN':'symbol-narrow':'4.0-0'}}</h6>
+                              <h6  class="card-text old_price">{{offer.price | currency:'NGN':'symbol-narrow':'4.0-0'}}</h6>
+                            </div>
+                            <div class="p-col-4">
+                              <h5 class="card-text text_color_red"><i>{{offer.discount}}%</i></h5>
+                            </div>
+                          </div>
+                         </div>
+                         <!--Discount-->
+                          <!--NonDiscount-->
+                          <div  *ngIf="offer.discount == 0">
+                            <div>
+                             <h6>{{offer.price | currency:'NGN':'symbol-narrow':'4.0-0'}}</h6>
+                            </div>
+                          </div>
+                              <!--NonDiscount-->
+                             <!--Out of stock-->
+                             <div *ngIf="offer.quantity == 0">
+                                <h6 class="card-text text_color_red out_of_stock">Out of Stock</h6>
+                             </div>
+                              <!--Out of stock-->
+                      </div>
+                    </div>
+                  </div>
+
+                  </div>
+              </div>
+
+          </div>
+
+    </div>
+ </div> 
+</div>      
+
+
+  <!--Content-->
+
+</div>

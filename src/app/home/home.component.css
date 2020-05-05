@@ -1,0 +1,518 @@
+.desktop {
+  height: 100%;
+  /*background-color: #f7f7f7;*/
+  background-color: #f2f2f2;
+}
+
+/* button e90171*/
+/* dark pink 2e1938*/
+/* lite pink 4b345e*/
+/* zoom blue 0088e7*/
+/* zoom button fe7222*/
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 8px;
+}
+
+.push {
+  margin-top: 20px;
+}
+.mobile_header {
+  height: 65px;
+  background-image: linear-gradient(to right, #1f4037, #00bcd4);
+  transition: 0.5s;
+  display: none;
+}
+
+.desktop_side_nav {
+  height: 100%; /* 100% Full-height */
+  width: 335px; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 50; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #fff; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 0px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
+    0 15px 12px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
+    0 15px 12px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+a[aria-expanded="true"] .pi-chevron-right {
+  transition: 0.3s transform ease-in-out;
+  transform: rotate(90deg);
+}
+a[aria-expanded="false"] .pi-chevron-right {
+  transition: 0.3s transform ease-in-out;
+  transform: rotate(0deg);
+}
+
+/*Nav icon*/
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.clickme {
+  position: relative;
+  top: 8px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #ffffff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.m_icon_r {
+  position: relative;
+  top: -2px;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* Nav icon */
+.logo {
+  width: 120px;
+  margin-left: 0.1em;
+  position: relative;
+  top: -0.1em;
+}
+
+.badge {
+  border-radius: 15px;
+  padding: 5px 5px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.cart {
+  width: 30px;
+  height: 30px;
+}
+
+.cart_desktop {
+  position: relative;
+  top: 0.1em;
+  left: 1.7em;
+}
+
+.logo_2 {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  top: -0.3em;
+}
+
+#mobileSideNav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 20; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #fff; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 0px; /* Place content 60px from the top */
+  -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
+    0 15px 12px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
+    0 15px 12px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+#main {
+  margin-left: 335px;
+  transition: margin-left 0.5s;
+  padding: 5px;
+}
+
+.hi {
+  position: relative;
+  top: 0.2em;
+}
+.h3_ad {
+  position: relative;
+  top: 3px;
+}
+
+.h4_ad {
+  position: relative;
+  top: 5px;
+}
+
+.btn {
+  font-family: "Cagliostro", sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  #main {
+    padding: 0px;
+    margin-left: 0px;
+  }
+  .desktop_side_nav {
+    display: none;
+  }
+  .mobile_header {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  #mobileSideNav {
+    width: 0 !important;
+  }
+}
+
+.router_link {
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+}
+.search_btn {
+  background-color: #fff !important;
+  color: #3192e1;
+}
+.search_margin {
+  position: relative;
+  top: 8px;
+}
+.search_input {
+  font-size: 13px !important;
+}
+
+.nav_ad {
+  margin-right: 0.65em;
+}
+
+.nav_ad2 {
+  margin-right: 0.65em;
+  position: relative;
+  top: -0.2em;
+}
+
+.special_adjust {
+  position: relative;
+  top: 0.3em;
+}
+
+.focus_name {
+  height: 60px;
+  padding: 0.5em;
+  background-color: #3192e1;
+}
+
+.focus_name h3 {
+  position: relative;
+  top: 0.1em;
+}
+.colorW {
+  color: #fff;
+}
+.searchbar {
+  background-color: #3192e1;
+  height: 50px;
+}
+.divider_focus {
+  background-color: #fff;
+  height: 2px;
+}
+.divider {
+  background-color: #fff;
+  height: 1px;
+}
+.m_logo {
+  width: 248px;
+  position: relative;
+  top: -3.15em;
+  left: 5px;
+}
+.m_side_logo {
+  width: 240px;
+  position: relative;
+  top: -3em;
+  left: -0.5em;
+}
+
+.d_side_logo {
+  width: 280px;
+  position: relative;
+  top: -3.8em;
+}
+.search {
+  width: 100%;
+  padding-left: 10px;
+}
+.padit {
+  padding: 0.2em;
+}
+a {
+  text-decoration: none;
+}
+
+.categories h3 {
+  color: #fff;
+  margin: 0.3em;
+}
+.nav_img {
+  width: 50px;
+  height: 50px;
+}
+
+.nav_img_2 {
+  width: 70px;
+  height: 65px;
+}
+
+.nav_img_3 {
+  width: 74px;
+  height: 58px;
+}
+
+.nav_img_4 {
+  width: 72px;
+  height: 73px;
+}
+
+.contact_us {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  left: 0.4em;
+}
+
+.nav_img_profile {
+  width: 35px;
+  height: 35px;
+  margin-top: 0.5em;
+}
+
+.nav_img_profile_2 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 0.1em;
+}
+
+.nav_img_spec {
+  width: 60px;
+  height: 30px;
+}
+.collapse_body {
+  background-color: #3192e1;
+  color: #fff;
+}
+.collapse_content {
+  padding: 0.5em;
+}
+.content_height {
+  height: 46px;
+}
+.content_height2 {
+  height: 59px;
+}
+.content_margin {
+  position: relative;
+  top: 4px;
+}
+.collapse_content h4 {
+  color: #fff;
+  margin: 0.3em;
+}
+.searchbar .ui-inputgroup {
+  margin-top: 0.1em;
+}
+.ui-inputgroup input {
+  border: 0;
+}
+.ui-inputgroup-addon {
+  border: 0;
+  background-color: #fff !important;
+}
+.ui-inputgroup-addon i {
+  color: #105079;
+}
+
+.logo_text {
+  color: #fff;
+  font-size: 30px;
+  position: relative;
+  top: 0.1em;
+  font-family: "Cagliostro", sans-serif;
+}
+
+.logo_text_mobile {
+  font-size: 25px !important;
+}
+.mobile_offer {
+  display: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .preloader {
+    left: 62% !important;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .preloader {
+    left: 64.5% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h3 {
+    font-size: 22px !important;
+  }
+  h4 {
+    font-size: 20px !important;
+  }
+  .nav_img {
+    width: 40px;
+    height: 40px;
+  }
+  .nav_img_profile {
+    width: 23px;
+    height: 23px;
+  }
+  .nav_img_2 {
+    width: 60px;
+    height: 55px;
+  }
+  .nav_img_3 {
+    width: 60px;
+    height: 55px;
+  }
+  .nav_img_4 {
+    width: 60px;
+    height: 57px;
+  }
+  .nav_img_profile_2 {
+    width: 37px;
+    height: 37px;
+  }
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+  .logo_2 {
+    width: 40px;
+    height: 40px;
+  }
+
+  .preloader {
+    left: 44% !important;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  h3 {
+    font-size: 20px !important;
+  }
+  h4 {
+    font-size: 18px !important;
+  }
+  .nav_img_profile {
+    width: 20px;
+    height: 20px;
+  }
+  .nav_img {
+    width: 35px;
+    height: 35px;
+  }
+  .nav_img_2 {
+    width: 55px;
+    height: 50px;
+  }
+  .nav_img_3 {
+    width: 55px;
+    height: 50px;
+  }
+  .nav_img_4 {
+    width: 55px;
+    height: 53px;
+  }
+  .nav_img_profile_2 {
+    width: 33px;
+    height: 33px;
+  }
+  .mobile_offer {
+    display: block;
+  }
+  .desk_offer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .clickme {
+    right: 0.7em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .preloader {
+    left: 38% !important;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .logo_text {
+    font-size: 22px;
+  }
+  .clickme {
+    right: 1.2em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .m_logo {
+    width: 225px;
+    top: -2.5em;
+  }
+  .clickme {
+    right: 1.55em;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .m_logo {
+    width: 210px;
+    top: -2.2em;
+  }
+}
+
+/*Loader*/
+
+.preloader {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  z-index: 1000;
+}
+
+/*Loader*/

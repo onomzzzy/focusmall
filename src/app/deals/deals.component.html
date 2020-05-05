@@ -1,0 +1,148 @@
+<!--Lastest Product-->
+
+<div *ngIf="latestProduct && latestProduct.length >= 0" class="push_color_bar">
+  <div class="color_bar">
+    <h4>Latest Deals</h4>
+  </div>
+</div>
+<!--Empty-->
+<div class="push_color_bar" *ngIf="isempty">
+  <div class="jumbotron">
+    <h1 class="display-4">No Stock Yet!</h1>
+    <p class="lead">No uploaded stock yet.You can place an order</p>
+    <hr class="my-4" />
+    <p>New stock will be added this Category soonest</p>
+  </div>
+</div>
+<!--Empty-->
+
+<!--Filter-->
+<div style="padding: 0px 18px;">
+  <div class="filter">
+    <h5>FILTERS <i class="pi pi pi-filter"></i></h5>
+  </div>
+  <p-card>
+    <div class="filter_margin">
+      <div>
+        <div>
+          <div class="p-grid">
+            <div class="p-col-12 p-sm-6 p-md-6 p-lg-3">
+              <div class="col_margin">
+                <span class="ui-float-label">
+                  <input
+                    id="float-input"
+                    type="number"
+                    [(ngModel)]="min"
+                    size="30"
+                    pInputText
+                  />
+                  <label for="float-input">Min price</label>
+                </span>
+              </div>
+            </div>
+            <div class="p-col-12 p-sm-6 p-md-6 p-lg-3">
+              <div class="col_margin">
+                <span class="ui-float-label">
+                  <input
+                    id="float-input"
+                    type="number"
+                    [(ngModel)]="max"
+                    size="30"
+                    pInputText
+                  />
+                  <label for="float-input">Max price</label>
+                </span>
+              </div>
+            </div>
+
+            <div class="p-col-12 p-sm-12 p-md-12 p-lg-6">
+              <div class="drop_lower col_margin">
+                <span class="ui-float-label">
+                  <input
+                    id="float-input"
+                    [(ngModel)]="brand"
+                    type="text"
+                    size="30"
+                    pInputText
+                  />
+                  <label for="float-input">Brand name</label>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </p-card>
+</div>
+
+<!--Filter-->
+
+<div class="push_color_bar" *ngIf="latestProduct && latestProduct.length > 0">
+  <!---->
+  <div class="container-fluid">
+    <div class="row no-gutters">
+      <!--Search Panel-->
+
+      <!--Search Panel-->
+      <div
+        *ngFor="
+          let latest of latestProduct
+            | minPrice: min
+            | maxPrice: max
+            | brandFilter: brand
+        "
+        class="col-6 col-sm-4 col-md-4 col-lg-3 d-flex"
+      >
+        <div (click)="onClickItem(latest)" class="card mb-0 card_margin">
+          <img class="card-img-top" data-src="{{ latest.picture[0] }}" alt="" />
+          <div class="card-body">
+            <h6 class="card-title" style="font-weight: 600;">
+              {{ latest.title | shortTitle: 1 }}
+            </h6>
+            <!--Discount-->
+            <div *ngIf="latest.discount > 0">
+              <div class="p-grid">
+                <div class="p-col-8">
+                  <h6 class="card-text">
+                    {{
+                      latest.newprice | currency: "NGN":"symbol-narrow":"4.0-0"
+                    }}
+                  </h6>
+                  <h6 class="card-text" style="text-decoration: line-through;">
+                    {{ latest.price | currency: "NGN":"symbol-narrow":"4.0-0" }}
+                  </h6>
+                </div>
+                <div class="p-col-4">
+                  <h5 class="card-text" style="color: red;">
+                    <i>{{ latest.discount }}%</i>
+                  </h5>
+                </div>
+              </div>
+            </div>
+            <!--Discount-->
+            <!--NonDiscount-->
+            <div *ngIf="latest.discount == 0">
+              <div>
+                <h6>
+                  {{ latest.price | currency: "NGN":"symbol-narrow":"4.0-0" }}
+                </h6>
+              </div>
+            </div>
+            <!--NonDiscount-->
+            <!--Out of stock-->
+            <div *ngIf="latest.quantity == 0">
+              <h6 class="card-text" style="color: red; font-weight: 800;">
+                Out of Stock
+              </h6>
+            </div>
+            <!--Out of stock-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!---->
+</div>
+
+<!--Lastest Product-->

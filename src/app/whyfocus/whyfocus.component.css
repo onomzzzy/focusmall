@@ -1,0 +1,38 @@
+.card_container {
+  width: 190px;
+}
+.navigate {
+  padding-top: 5px;
+  padding-left: 2px;
+}
+.nav_content img {
+  width: 18px;
+}
+.nav_header {
+  position: relative;
+  top: 7px;
+}
+.nav_header img {
+  width: 20px;
+  position: relative;
+  top: -6px;
+}
+.nav_header span {
+  font-family: "Cagliostro", sans-serif;
+  position: relative;
+  top: -2px;
+}
+.nav_content span {
+  font-family: "Cagliostro", sans-serif;
+}
+
+.lift {
+  height: 10px;
+}
+
+.nav_content span span {
+  font-size: 15px;
+  position: relative;
+  left: 5px;
+  top: 2px;
+}

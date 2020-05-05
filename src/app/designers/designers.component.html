@@ -1,0 +1,24 @@
+<!--Desktop-->
+<div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <app-carosel
+          [carousel1]="carosel[0]"
+          [carousel2]="carosel[1]"
+        ></app-carosel>
+      </div>
+      <div class="col-12">
+        <div class="push">
+          <app-discounted [category]="designer"></app-discounted>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="push">
+          <app-deals [category]="designer"></app-deals>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Desktop-->

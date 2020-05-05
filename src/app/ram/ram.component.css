@@ -1,0 +1,105 @@
+
+@media screen and (max-width: 768px){
+    .page{
+      margin:.5em;
+    }
+  }
+  
+  input{
+    width:100%;
+  }
+
+  textarea{
+    width:100%;
+  }
+
+  .row{
+      padding-bottom:18px;
+  }
+  .col{
+      padding-bottom:5px;
+  }
+
+  .rowlar{
+    padding-bottom:0px!important
+}
+.rowlar h6{
+    color: #bbb;
+}
+  
+  .login-body {
+    /*background-image: url("../../assets/images/icons/fm_2.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;*/ 
+    padding:20px;
+    }
+    .login-body .login-panel {
+      max-width: 1050px;
+      min-height: 500px;
+      background-color: #ffffff;
+      /*position: absolute;*/
+      margin: 0 auto;
+      /*left: 50%;
+      top: 50%;
+      margin-left: -275px;
+      margin-top: -240px;*/
+      padding: 0;
+      -moz-border-radius: 2px;
+      -webkit-border-radius: 2px;
+      border-radius: 2px;
+      -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 6px 10px 0 rgba(0, 0, 0, 0.14);
+      -moz-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 6px 10px 0 rgba(0, 0, 0, 0.14);
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 6px 10px 0 rgba(0, 0, 0, 0.14); }
+      .login-body .login-panel .login-panel-header {
+        background-color: #105079;
+        text-align: center;
+        padding: 8px 14px; }
+        .login-body .login-panel .login-panel-header img {
+          vertical-align: middle;
+          width: 50px; }
+      .login-body .login-panel .login-panel-content {
+        padding: 15px 40px; }
+        .login-body .login-panel .login-panel-content h1 {
+          font-size: 16px;
+          margin-top: 0;
+          margin-bottom: 16px;
+          text-align: center; }
+        .login-body .login-panel .login-panel-content .ui-g-12, .login-body .login-panel .login-panel-content .ui-g-6 {
+          padding: 1em; }
+          .login-body .login-panel .login-panel-content .ui-g-12:last-child, .login-body .login-panel .login-panel-content .ui-g-6:last-child {
+            text-align: center; }
+            .login-body .login-panel .login-panel-content .ui-g-12:last-child a, .login-body .login-panel .login-panel-content .ui-g-6:last-child a {
+              color: #7CB342; }
+        .login-body .login-panel .login-panel-content .password-reset {
+          text-align: right; }
+          .login-body .login-panel .login-panel-content .password-reset a {
+            color: #757575; }
+        .login-body .login-panel .login-panel-content .ui-chkbox-label {
+          margin: 0 0 0 8px;
+          vertical-align: middle; }
+
+          .rem{
+            position:relative;top:-3px;right:3px;
+          }
+
+  @media (max-width: 860px) {
+    .login-body .login-panel .login-panel-content {
+        padding: 5px 3px; }           
+  }
+  
+  @media (max-width: 640px) {
+    .login-body .login-panel {
+      left: 0;
+      margin-left: 0;
+      width: 100%; }
+      .login-body .login-panel .login-panel-content {
+        padding: 5px 5px; } }
+
+        .upload-image {
+          height: 160px;
+          width: 160px;
+          cursor: pointer;
+          border: 1px solid #b3c2ca; 
+        }

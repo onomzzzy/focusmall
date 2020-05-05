@@ -1,0 +1,95 @@
+.exception-body {
+    /*height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    padding:20px; }
+    .exception-body.error {
+      background-image: url("/serenity/javax.faces.resource/images/exception/error-bg.jpg.xhtml?ln=serenity-layout"); }
+      .exception-body.error .exception-panel .exception-code {
+        background-color: #e91e63; }
+        .exception-body.error .exception-panel .exception-code img {
+          margin-left: -194px; }
+      .exception-body.error .exception-panel .exception-icon {
+        background-color: #e91e63; }
+    .exception-body.notfound {
+      background-image: url("/serenity/javax.faces.resource/images/exception/notfound-bg.jpg.xhtml?ln=serenity-layout"); }
+      .exception-body.notfound .exception-panel .exception-code {
+        background-color:#105079; }
+        .exception-body.notfound .exception-panel .exception-code img {
+          margin-left: -206px; }
+      .exception-body.notfound .exception-panel .exception-icon {
+        background-color: #105079; }
+    .exception-body .exception-panel {
+      width: 550px;
+      height: 480px;
+      background-color: #ffffff;
+      /*position: absolute;*/
+      margin: 0 auto;
+      left: 50%;
+      top: 50%;
+     /* margin-left: -275px;
+      margin-top: -240px;*/
+      padding: 0;
+      text-align: center;
+      -moz-border-radius: 2px;
+      -webkit-border-radius: 2px;
+      border-radius: 2px;
+      -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 6px 10px 0 rgba(0, 0, 0, 0.14);
+      -moz-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 6px 10px 0 rgba(0, 0, 0, 0.14);
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 6px 10px 0 rgba(0, 0, 0, 0.14); }
+      .exception-body .exception-panel .exception-code {
+        height: 240px;
+        position: relative; }
+        .exception-body .exception-panel .exception-code img {
+          position: absolute;
+          bottom: 0;
+          height: 190px;
+          left: 50%; }
+      .exception-body .exception-panel .exception-detail {
+        height: 240px;
+        position: relative;
+        padding: 60px 0 0 0; }
+        .exception-body .exception-panel .exception-detail .exception-icon {
+          width: 90px;
+          height: 90px;
+          line-height: 90px;
+          text-align: center;
+          display: inline-block;
+          z-index: 100;
+          position: absolute;
+          top: -45px;
+          left: 50%;
+          margin-left: -45px;
+          -moz-border-radius: 50%;
+          -webkit-border-radius: 50%;
+          border-radius: 50%;
+          -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.14);
+          -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.14);
+          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.14); }
+          .exception-body .exception-panel .exception-detail .exception-icon i {
+            font-size: 45px;
+            line-height: inherit;
+            color: #ffffff; }
+        .exception-body .exception-panel .exception-detail h1 {
+          font-size: 15px;
+          font-weight: bold;
+          margin: 10px 0 8px 0; }
+        .exception-body .exception-panel .exception-detail p {
+          color: #757575;
+          margin: 0 0 60px 0; }
+  
+  @media (max-width: 640px) {
+    .exception-body .exception-panel {
+      left: 0;
+      margin-left: 0;
+      width: 100%; }
+    .exception-body.error .exception-panel .exception-code img {
+      height: 150px;
+      margin-left: -150px; }
+    .exception-body.notfound .exception-panel .exception-code img {
+      height: 150px;
+      margin-left: -163px; }
+    .exception-body.accessdenied .exception-panel .exception-code img {
+      height: 150px;
+      margin-left: -141px; } }

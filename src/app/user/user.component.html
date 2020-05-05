@@ -1,0 +1,131 @@
+<div class="page" style="padding:.5em;">
+    <!--Large Screen-->
+    <div class="lg_screen">
+
+    <div class="p-grid">
+
+        <div class="p-col-12 p-md-6">
+       <app-settings></app-settings>
+        </div>
+
+        <div class="p-col-12 p-md-6">
+        <!--Send Message-->
+         
+        <div>
+            <div class="update_profile">
+                <h4>Send Message</h4>
+            </div>
+          <p-card [style]="{width: '100%', border: '1px solid #b3c2ca'}">
+                    <div class="content-section implementation">
+                                    <p-toast [style]="{marginTop: '80px'}"></p-toast>
+                                    <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid form_panel">
+
+                                        <div class="ui-grid-row">
+                                            <div class="ui-grid-col-12">
+                                                <div style="margin-top:1.5em;">
+                                                <div class="input_margin">
+                                                    <span class="ui-float-label">
+                                                        <textarea id="float-input" rows="13" cols="30" pInputTextarea></textarea>
+                                                        <label for="float-input">Message ....</label>
+                                                    </span>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="ui-grid-row">
+                                            <div class="ui-grid-col-12">
+                                                <button pButton type="button" label="Send" ></button>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                        </div>
+            </p-card>
+        </div>
+        <!--Send Message-->
+         </div>
+
+         <div class="p-col-12">
+            <app-messagecenter></app-messagecenter>
+          </div>
+
+         <div class="p-col-12">
+            <!--My Orders-->
+            
+            <app-orders></app-orders>
+
+            <!--My Orders-->
+          </div>
+
+    </div>
+
+    </div>
+    <!--Large Screen-->
+
+    <!--Small Screen-->
+    <div class="sm_screen">
+
+        <div class="p-grid">
+    
+            <div class="p-col-12">
+           <app-settings></app-settings>
+            </div>
+    
+            <div class="p-col-12">
+              <app-messagecenter></app-messagecenter>
+            </div>
+    
+            <div class="p-col-12">
+            <!--Send Message-->
+             
+            <div>
+                <div class="update_profile">
+                    <h4>Send Message</h4>
+                </div>
+              <p-card [style]="{width: '100%', border: '1px solid #b3c2ca'}">
+                        <div class="content-section implementation">
+                                        <p-toast [style]="{marginTop: '80px'}"></p-toast>
+                                        <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid form_panel">
+    
+                                            <div class="ui-grid-row">
+                                                <div class="ui-grid-col-12">
+                                                    <div style="margin-top:1.5em;">
+                                                    <div class="input_margin">
+                                                        <span class="ui-float-label">
+                                                            <textarea id="float-input" rows="13" cols="30" pInputTextarea></textarea>
+                                                            <label for="float-input">Message ....</label>
+                                                        </span>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="ui-grid-row">
+                                                <div class="ui-grid-col-12">
+                                                    <button pButton type="button" label="Send" ></button>
+                                                </div>
+                                               
+                                            </div>
+                                        </div>
+                            </div>
+                </p-card>
+            </div>
+            <!--Send Message-->
+             </div>
+    
+             <div class="p-col-12">
+                <!--My Orders-->
+                
+                <app-orders></app-orders>
+    
+                <!--My Orders-->
+              </div>
+    
+        </div>
+    
+        </div>
+        <!--Small Screen-->
+
+
+</div>

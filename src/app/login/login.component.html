@@ -1,0 +1,43 @@
+
+<div class="page">
+    <div class="login-body">
+        <div class="login-panel ui-fluid">
+            <div class="login-panel-header">
+            <img src="../../assets/images/icons/logo.png" alt="">
+            </div>
+            <div class="login-panel-content">
+                <form [formGroup]="userform" (ngSubmit)="onSubmit(userform.value)">
+                <div class="ui-g">
+                    <div class="ui-g-12">
+                        <h1>Sign-in to Focus Mall</h1>
+                    </div>
+                    <div class="ui-g-12">
+                        <span class="ui-float-label">
+                            <input id="float-input" formControlName="username" type="text" size="30" pInputText> 
+                            <label for="float-input">Username</label>
+                        </span>
+                    </div>
+                    <div class="ui-g-12">
+                        <span class="ui-float-label">
+                            <input id="float-input" formControlName="password" type="password" size="30" pInputText> 
+                            <label for="float-input">Password</label>
+                        </span>
+                    </div>
+                    <div class="ui-g-6 ">
+                    <div id="rememberme" class="ui-selectbooleancheckbox ui-chkbox ui-widget">
+                    <p-checkbox [style]="{position: 'relative',top:'-3px'}" formControlName="rememberMe" binary="true"></p-checkbox>
+                    </div><label style="font-family: 'Cagliostro', sans-serif;margin-left:2px;" class="ui-outputlabel ui-widget">Remember Me?</label>
+                    </div>
+                    <div class="ui-g-6 password-reset"><a href="">Reset Password</a>
+                    </div>
+                    <div class="ui-g-12">
+                    <button pButton type="submit" label="Sign In" [disabled]="!userform.valid"></button>
+                    </div>
+                    <div class="ui-g-12">
+                        <span class="account_d">Don't have an account? <a routerLink="/home/register">Sign Up</a> now.</span>
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div></div>
+</div>

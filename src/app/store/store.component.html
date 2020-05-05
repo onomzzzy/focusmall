@@ -1,0 +1,199 @@
+
+<div class="page">
+
+  <!--Carosel-->
+  <div>
+    <app-carosel></app-carosel>
+  </div>
+  <!--Carosel-->
+ 
+
+
+ <!--Store Content-->
+    <div class="p-col-12">
+
+      <div class="p-grid">
+
+        <!--Discounted-->
+
+        <div class="p-col-12">
+
+        <div class="under_10k">
+        <h4>Below 40K</h4>
+        </div>
+
+        <div style="margin-top:10px">
+        <app-focus-advent></app-focus-advent>
+        </div>
+
+          </div>
+
+        <!--Discounted-->
+
+         <!--Below 40k-->
+
+         <div class="p-col-12">
+          
+          <div class="best_sellers">
+          <h4>Bonaza</h4>
+          </div>
+
+          <div style="margin-top:10px">
+            <app-discounted></app-discounted>
+          </div>
+  
+            </div>
+  
+          <!--Below 40k-->
+
+          <!--Advert-->
+
+         <div class="p-col-12">
+
+          <div>
+             <img class="offer_pixs" (click)="onClickSpecialOffer(2)"  src="../../assets/images/carosel/carosel3.jpg">
+           </div>
+ 
+         </div>
+ 
+         <!--Advert-->
+
+         <!--Limited stock-->
+         <div class="p-col-12">
+          
+          <div class="limited_offers">
+          <h4>Limited Offers</h4>
+          </div>
+
+          <div style="margin-top:10px">
+            <app-limitedstock></app-limitedstock>
+          </div>
+  
+            </div>
+         <!--Limited stock-->
+
+          <!--Limited stock-->
+          <div class="p-col-12">
+          
+            <div class="accesseries">
+            <h4>Accessaries for you</h4>
+            </div>
+  
+            <div style="margin-top:10px">
+              <app-accessariesforyou></app-accessariesforyou>
+            </div>
+    
+              </div>
+           <!--Limited stock-->
+
+          <!--For Gamers-->
+
+          <div class="p-col-12">
+
+            <div>
+               <img class="offer_pixs offer_game" (click)="onClickSpecialOffer(1)" src="../../assets/images/carosel/forgamers.jpg">
+             </div>
+   
+           </div>
+   
+           <!--for Gamers-->
+
+        <!--Lastest Product-->
+
+        <div class="p-col-12">
+                <div class="lastest_product">
+                 <h4>Lastest Deals</h4>
+                </div>
+            <!--Empty-->
+            <div *ngIf="latestProduct.length == 0">
+              <div class="jumbotron">
+                <h1 class="display-4">No Stock Yet!</h1>
+                <p class="lead">No uploaded stock yet.You can place an order</p>
+                <hr class="my-4">
+                <p>New stock will be added to Focus Mall</p>
+              </div>
+            </div>
+            <!--Empty-->
+
+            <div style="margin-top:10px">
+                <!---->
+                <div class="container-fluid">
+                  <div class="row no-gutters">
+                    <div *ngFor="let latest of latestProduct" class="col-6 col-sm-4 col-md-4 col-lg-3 d-flex">
+                      <div (click)="onClickItem(latest)" class="card mb-2">
+                        <img class="card-img-top" data-src="{{latest.picture[0]}}" alt="">
+                        <div class="card-body" style="padding:5px;text-align:left;">
+                          <h6 class="card-title" style="font-weight: 600;">{{latest.title | shortTitle:1}}</h6>
+                          <!--Discount-->
+                          <div *ngIf="latest.discount > 0">
+                            <div class="p-grid">
+                              <div class="p-col-8">
+                                <h6 class="card-text">{{latest.newprice | currency:'NGN':'symbol-narrow':'4.0-0'}}</h6>
+                                <h6  class="card-text" style="text-decoration: line-through;">{{latest.price | currency:'NGN':'symbol-narrow':'4.0-0'}}</h6>
+                              </div>
+                              <div class="p-col-4">
+                                <h5 class="card-text" style="color: red;"><i>{{latest.discount}}%</i></h5>
+                              </div>
+                            </div>
+                           </div>
+                           <!--Discount-->
+                            <!--NonDiscount-->
+                            <div  *ngIf="latest.discount == 0">
+                              <div>
+                               <h6>{{latest.price | currency:'NGN':'symbol-narrow':'4.0-0'}}</h6>
+                              </div>
+                            </div>
+                                <!--NonDiscount-->
+                               <!--Out of stock-->
+                               <div *ngIf="latest.quantity == 0">
+                                  <h6 class="card-text" style="color:red;font-weight:800;">Out of Stock</h6>
+                               </div>
+                                <!--Out of stock-->
+                        </div>
+                      </div>
+                    </div>
+
+                    </div>
+
+                    </div>
+                <!---->
+            </div>
+
+            <!--Content-->
+            <!--</p-card>-->
+        </div>
+
+        <!--Lastest Product-->
+
+         
+
+
+      </div>
+
+    </div>
+ <!--Store Content-->
+
+ 
+
+</div>
+<!--Footer-->
+ <div class="footer_panel">
+ <div>
+   <img class="footer_focus_img" src="../../assets/images/icons/logo.png">
+ </div>
+ <div class="footer_social_media">
+ <div class="p-grid">
+   <div class="p-col-4">
+     <img class="social_media_img" src="../../assets/images/icons/facebook.png">
+   </div>
+   <div class="p-col-4">
+    <img class="social_media_img" src="../../assets/images/icons/twitter.png">
+  </div>
+  <div class="p-col-4">
+    <img class="social_media_img" src="../../assets/images/icons/instagram.png">
+  </div>
+ </div>
+ </div>
+ </div>
+
+ <!--Footer-->

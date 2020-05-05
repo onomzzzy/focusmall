@@ -1,0 +1,156 @@
+
+<div class="page">
+    <p-toast [style]="{marginTop: '80px'}"></p-toast>
+    <div class="login-body">
+        <div class="login-panel ui-fluid">
+            <div class="login-panel-header">
+            <img src="../../assets/images/icons/responsive.png" alt="">
+            </div>
+            <div class="login-panel-content">
+                <form [formGroup]="userform" (ngSubmit)="onSubmit(userform.value)">
+                <div class="ui-g">
+                    <div class="ui-g-12">
+                        <h1>Upload Item(s)</h1>
+                    </div>
+                    
+                    <div class="ui-g-12">
+                        <h3>SCREEN</h3>
+                        <hr class="mb-4">
+                        <div class="container-fluid">
+                        <div class="row rowlar">
+                         <h6>Name</h6>   
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p-dropdown [options]="condition" formControlName="condition"></p-dropdown>
+                            </div>
+                            <div class="col">
+                                <p-dropdown [options]="screenType" formControlName="screenType"></p-dropdown>
+                            </div>
+                            <div class="col">
+                                <p-dropdown [options]="screenSize" formControlName="screenSize"></p-dropdown>
+                            </div>
+                            
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <p-dropdown [options]="screenDisplay" formControlName="screenDisplay"></p-dropdown>
+                            </div>
+                            <div class="col">
+                                <span class="ui-float-label">
+                                    <input id="float-input" formControlName="model" type="text" size="30" pInputText> 
+                                    <label for="float-input">Model</label>
+                                </span>
+                            </div>
+                            </div>
+
+                        <!--Auto Description-->
+                        <div class="row rowlar">
+                            <h6 style="margin-right:5px;">Auto Description</h6> 
+                            <p-inputSwitch (onChange)="handleChange($event)"></p-inputSwitch>  
+                        </div>
+                        <div *ngIf="!autoDes" class="row">
+                            <div class="col-12">
+                                <textarea rows="5" placeholder="Description in Detials" formControlName="description" pInputTextarea autoResize="autoResize"></textarea>  
+                            </div>
+                        </div>
+
+                        <!--Auto Description-->
+
+
+
+                         <!--Upload Pictures-->
+
+                          <!--Upload Pictures-->
+
+                          <div class="row rowlar">
+                            <h6>Upload Pictures</h6>   
+                        </div>
+
+                        <div class="row" style="text-align: center">
+                            <div class="col">
+                                <input type="file" style="display:none;"  (change)="onUpload($event,0)" #fileInput>
+                                <img class="upload-image" src="{{pix}}" (click)="fileInput.click()">
+                            </div>
+                            <div class="col">
+                                    <input type="file" style="display:none;"  (change)="onUpload($event,1)" #fileInput1>
+                                    <img class="upload-image" src="{{pix1}}"
+                                    (click)="fileInput1.click()">
+                            </div>
+                           <div class="col">
+                                <input type="file" style="display:none;"  (change)="onUpload($event,2)" #fileInput2>
+                                    <img class="upload-image" src="{{pix2}}"
+                                    (click)="fileInput2.click()">
+                            </div>
+
+                            <div class="col">
+                                <input type="file" style="display:none;"  (change)="onUpload($event,3)" #fileInput3>
+                                    <img  src="{{pix3}}" class="upload-image" (click)="fileInput3.click()">
+                            </div>   
+                           
+                           
+                        </div>
+
+                        <!--Upload Pictures-->
+
+                         
+                          <!--Price-->
+
+                          <div class="row rowlar">
+                            <h6>Price</h6>   
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <span class="ui-float-label">
+                                    <input id="float-input" formControlName="discount" type="number" size="30" pInputText> 
+                                    <label for="float-input">Discount</label>
+                                </span>
+                            </div>
+                            <div class="col">
+                                <span class="ui-float-label">
+                                    <input id="float-input" formControlName="quantity" type="number" size="30" pInputText> 
+                                    <label for="float-input">Quantity</label>
+                                </span>
+                            </div>
+ 
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <span class="ui-float-label">
+                                    <input id="float-input" formControlName="price" type="number" size="30" pInputText> 
+                                    <label for="float-input">Price</label>
+                                </span>
+                            </div> 
+
+                            <div class="col">
+                                <span class="ui-float-label">
+                                    <input id="float-input" formControlName="location" type="text" size="30" pInputText> 
+                                    <label for="float-input">Item Location</label>
+                                </span>
+                            </div> 
+
+                        </div>
+
+                        <!--Price-->
+
+
+
+                        </div>
+                       
+                    </div>
+
+                   
+                    
+                    <div class="ui-g-12">
+                    <button pButton type="submit" label="Upload" [disabled]="!userform.valid"></button>
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div></div>
+</div>
+
+

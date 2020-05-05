@@ -1,0 +1,56 @@
+
+<div class="page" style="padding-top:.5em;">
+
+    <div class="message_panel">
+         <!--Header-->
+        <div class="inbox_header">
+            <div class="p-grid">
+                <div class="p-col-8">
+                    <div class="header_text">
+                    <h4>My Orders</h4>
+                </div>
+                </div>
+                <div class="p-col-4">
+                </div>
+
+            </div>
+            
+        </div>
+     <!--Header-->
+
+     <!--body-->
+     <div>
+         <p-card [style]="{width: '100%', border: '1px solid #b3c2ca'}">
+             <div class="onome_scroll">
+                <ul>
+                    <li *ngFor="let order of orders">
+                        <p-card [style]="{width: '100%', border: '1px solid #b3c2ca'}">
+                        <div class="image-container">
+                            <img  src="../../assets/images/items/{{order.item.picture[0]}}.jpg" alt="" />
+                        </div>
+                        <div class="seperator"></div>
+                        <div class="message-box">
+                            <span class="messager">{{order.item.id}} </span>
+                            <span class="time"> </span>   
+                            <span class="message">{{order.item.title}}</span>    
+                            <span *ngIf="order.item.discount == 0 || order.item.discount == 1" class="message">&#x20A6;{{order.item.price}}</span>   
+                            <span *ngIf="order.item.discount > 1" class="message">&#x20A6;{{getNewPrice(order.item.discount,order.item.price)}}</span>  
+                        </div>
+                        <div *ngIf="order.purchaseTime !=null" class="message-status">
+                            <img src="../../assets/images/icons/info.png">
+                            <span></span>
+                        </div>  
+                    </p-card>
+                    </li>
+                    </ul>
+             </div>
+         </p-card>
+     </div>
+
+      <!--body-->
+    </div>
+
+
+
+
+</div>

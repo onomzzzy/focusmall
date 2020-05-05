@@ -1,0 +1,57 @@
+
+<div class="page" style="padding-top:.5em;">
+
+        <div class="message_panel">
+             <!--Header-->
+            <div class="inbox_header">
+                <div class="p-grid">
+                    <div class="p-col-4">
+                        <div class="header_text">
+                        <h4>Inbox</h4>
+                    </div>
+                    </div>
+                    <div class="p-col-8">
+                        <div class="empty">
+                            <img src="../../assets/images/icons/trash.png">
+                        </div>
+                    </div>
+    
+                </div>
+                
+            </div>
+         <!--Header-->
+    
+         <!--body-->
+         <div>
+             <p-card [style]="{width: '100%', border: '1px solid #b3c2ca'}">
+                 <div class="onome_scroll">
+                    <ul>
+                        <li *ngFor="let message of msg">
+                            <p-card [style]="{width: '100%', border: '1px solid #b3c2ca'}">
+                            <div class="image-container">
+                                <img  src="../../assets/images/users/saul.jpg" alt="" />
+                            </div>
+                            <div class="seperator"></div>
+                            <div class="message-box">
+                                <span class="messager">Focus Mall </span>
+                                <span class="time"> {{message.time.day}}/{{message.time.month}}/{{message.time.year}}</span>   
+                                <span class="message">{{message.message}}</span>       
+                            </div>
+                            <div class="message-status">
+                                <img src="../../assets/images/icons/bin.png">
+                                <span></span>
+                            </div>  
+                        </p-card>
+                        </li>
+                        </ul>
+                 </div>
+             </p-card>
+         </div>
+    
+          <!--body-->
+        </div>
+    
+    
+
+
+</div>

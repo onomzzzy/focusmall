@@ -1,0 +1,100 @@
+{
+    "data": [
+
+        {
+            "id":"msg0023",
+            "user":{
+                "id":"samo123r45e",
+                "username":"onomzzzy@gmail.com",
+                "password":"onome12345",
+                "firstname":"Samuel",
+                "lastname":"Onome",
+                "pix":"../../assets/images/users/jesse.jpg",
+                "role":"USER",
+                "address":"20 David Street Ojo Lagos",
+                "phoneno":"09056784325",
+                "whatsapp":"08067543261"
+            },
+            "reciever":"USER",
+            "message":"thanks for your purchase .Processing of your item will take 2 working days",
+            "time":{
+                "year":2020,
+                "month":3,
+                "day":27
+            }
+        
+        
+        },
+        {
+            "id":"msg0024",
+            "user":{
+                "id":"samo123r45e",
+                "username":"onomzzzy@gmail.com",
+                "password":"onome12345",
+                "firstname":"Samuel",
+                "lastname":"Onome",
+                "pix":"../../assets/images/users/jesse.jpg",
+                "role":"USER",
+                "address":"20 David Street Ojo Lagos",
+                "phoneno":"09056784325",
+                "whatsapp":"08067543261"
+            },
+            "reciever":"USER",
+            "message":"Your item have been processed and will be sent to you today",
+            "time":{
+                "year":2020,
+                "month":3,
+                "day":31
+            }
+        
+        
+        },
+        {
+            "id":"msg002431",
+            "user":{
+                "id":"samo123r45e",
+                "username":"onomzzzy@gmail.com",
+                "password":"onome12345",
+                "firstname":"Samuel",
+                "lastname":"Onome",
+                "pix":"../../assets/images/users/jesse.jpg",
+                "role":"USER",
+                "address":"20 David Street Ojo Lagos",
+                "phoneno":"09056784325",
+                "whatsapp":"08067543261"
+            },
+            "reciever":"USER",
+            "message":"Your item have been processed and wil be send to our dispatch team for futher check",
+            "time":{
+                "year":2020,
+                "month":4,
+                "day":15
+            }
+        
+        
+        },
+        {
+            "id":"msg0025",
+            "user":{
+                "id":"samo123r45e",
+                "username":"onomzzzy@gmail.com",
+                "password":"onome12345",
+                "firstname":"Samuel",
+                "lastname":"Onome",
+                "pix":"../../assets/images/users/jesse.jpg",
+                "role":"USER",
+                "address":"20 David Street Ojo Lagos",
+                "phoneno":"09056784325",
+                "whatsapp":"08067543261"
+            },
+            "reciever":"USER",
+            "message":"Thanks for using Focus Mall.For Enquiries call 09084567832",
+            "time":{
+                "year":2020,
+                "month":4,
+                "day":4
+            }
+        }
+
+    ]
+}

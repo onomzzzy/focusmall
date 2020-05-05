@@ -1,0 +1,41 @@
+<div class="content-section implementation carousel-demo">
+    <p-carousel [value]="items" [numVisible]="4" [numScroll]="3" [circular]="false" [responsiveOptions]="responsiveOptions">
+        <p-header>
+            <h3>Basic</h3>
+        </p-header>
+        <ng-template let-latest pTemplate="item">
+            <div class="card mb-2 caro-card">
+                <img class="card-img-top" src="../../assets/images/items/{{latest.picture[0]}}.jpg"
+                  alt="Card image cap">
+                <div class="card-body" style="padding:5px;text-align:left;">
+                  <h6 class="card-title" style="font-weight: 600;">{{latest.title}}</h6>
+                  <!--Discount-->
+                  <div *ngIf="latest.discount > 0">
+                    <div class="p-grid">
+                      <div class="p-col-8">
+                        <h6 class="card-text">&#x20A6;{{getNewPrice(latest.price,latest.discount)}}</h6>
+                        <h6  class="card-text" style="text-decoration: line-through;">&#x20A6;{{latest.price}}</h6>
+                      </div>
+                      <div class="p-col-4">
+                        <h5 class="card-text" style="color: red;"><i>{{latest.discount}}%</i></h5>
+                      </div>
+                    </div>
+                   </div>
+                   <!--Discount-->
+                    <!--NonDiscount-->
+                    <div  *ngIf="latest.discount == 0">
+                      <div>
+                       <h6>&#x20A6;{{latest.price}}</h6>
+                      </div>
+                    </div>
+                        <!--NonDiscount-->
+                       <!--Out of stock-->
+                       <div *ngIf="latest.quantity == 0">
+                          <h6 class="card-text" style="color:red;font-weight:800;">Out of Stock</h6>
+                       </div>
+                        <!--Out of stock-->
+                </div>
+              </div>
+        </ng-template>
+    </p-carousel>
+    </div>

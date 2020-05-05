@@ -1,0 +1,51 @@
+
+<div class="page" style="padding-top:.5em;">
+
+    <div class="message_panel">
+
+     <!--body-->
+     <div>
+         <p-card [style]="{width: '100%', border: '1px solid #b3c2ca'}">
+             <div>
+                 <div *ngIf="cartItems.length == 0">
+                     <div>
+                        <div class="alert alert-primary">
+                            <strong>Empty!</strong> Your cart is Empty.
+                          </div>
+                     </div>
+                 </div>
+                <ul>
+                    <li *ngFor="let cart of cartItems">
+                        <p-card [style]="{width: '100%', border: '1px solid #b3c2ca'}">
+                        <div class="image-container">
+                            <img  src="{{cart.picture[0]}}" alt="" />
+                        </div>
+                        <div class="seperator"></div>
+                        <div class="message-box">
+                            <span class="messager">{{cart.id}} </span>
+                            <span class="time"></span>   
+                            <span class="message">{{cart.title}}</span>
+                            <span class="message">Qty:{{cart.quantity}}</span> 
+                            <span *ngIf="cart.discount > 0" class="message">{{cart.newprice | currency:'NGN':'symbol-narrow':'4.0-0'}}</span>   
+                            <span *ngIf="cart.discount == 0" class="message">{{cart.price | currency:'NGN':'symbol-narrow':'4.0-0'}}</span>   
+                            
+                        </div>
+                        <div class="message-status">
+                            <i *ngIf="cart.quantity == 1" (click)="deleteCartItem(cart)" class="pi pi-times"></i>
+                            <i *ngIf="cart.quantity > 1"class="pi pi-minus" (click)="deleteCartItem(cart)"></i>
+                            <span></span>
+                        </div>  
+                    </p-card>
+                    </li>
+                    </ul>
+             </div>
+         </p-card>
+     </div>
+
+      <!--body-->
+    </div>
+
+
+
+
+</div>

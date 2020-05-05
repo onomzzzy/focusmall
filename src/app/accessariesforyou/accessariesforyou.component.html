@@ -1,0 +1,41 @@
+
+<div class="content-section implementation carousel-demo">
+    <p-carousel *ngIf=" focusAd && focusAd.length > 0" [value]="focusAd" [numVisible]="4" [numScroll]="3" [circular]="true" [responsiveOptions]="responsiveOptions">
+        <ng-template let-focus pTemplate="item">
+            <div class="card mb-2 caro-card" (click)="onClickItem(focus)">
+                <img class="card-img-top" src="{{focus.picture[0]}}"
+                  alt="">
+                <div class="card-body" style="padding:5px;text-align:left;">
+                  <h6 class="card-title" style="font-weight: 600;">{{focus.title | shortTitle:0}}</h6>
+                  <!--Discount-->
+                  <div *ngIf="focus.discount > 0">
+                    <div class="p-grid">
+                      <div class="p-col-8">
+                        <h6 class="card-text">{{focus.price | currency:'NGN':'symbol-narrow':'4.0-0'}}</h6>
+                        <h6  class="card-text" style="text-decoration: line-through;">{{focus.price | currency:'NGN':'symbol-narrow':'4.0-0'}}</h6>
+                      </div>
+                      <div class="p-col-4">
+                        <h5 class="card-text" style="color: red;"><i>{{focus.discount}}%</i></h5>
+                      </div>
+                    </div>
+                   </div>
+                   <!--Discount-->
+                    <!--NonDiscount-->
+                    <div  *ngIf="focus.discount == 0">
+                      <div>
+                       <h6>{{focus.price | currency:'NGN':'symbol-narrow':'4.0-0'}}</h6>
+                      </div>
+                    </div>
+                        <!--NonDiscount-->
+                       <!--Out of stock-->
+                       <div *ngIf="focus.quantity == 0">
+                          <h6 class="card-text" style="color:red;font-weight:800;">Out of Stock</h6>
+                       </div>
+                        <!--Out of stock-->
+                </div>
+              </div>
+        </ng-template>
+    </p-carousel>
+    </div>
+
+

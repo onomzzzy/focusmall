@@ -1,0 +1,189 @@
+.page{
+    margin:.3em
+}
+
+.offer_pixs{
+    width:100%;
+    cursor: pointer;
+}
+
+.offer_game{
+    max-height:512px   
+}
+
+/*.ui-carousel .ui-carousel-content .ui-carousel-item{
+    border-radius: 3px;
+    margin: 0.3em;
+    text-align: center;
+    padding: 2em 0 2.25em 0;
+  }*/
+
+.lastest_product{
+    background-image: linear-gradient(to right,#563e7c ,#605196);
+    height: 35px;
+    width:150px;
+    padding:1px;
+    padding-top:2px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+}
+
+.lastest_product h4{
+   color: #FFF;
+   margin: 1px 0px;
+   }
+
+   
+
+.best_sellers{
+    background-image: linear-gradient(to right, #105079, #00c4e6);
+    height: 35px;
+    width:150px;
+    padding:1px;
+    padding-top:2px;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.limited_offers{
+    background-image: linear-gradient(to right, #2196F3, #64b5f6);
+    height: 35px;
+    width:200px;
+    padding:1px;
+    padding-top:2px;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.accesseries{
+    background-image: linear-gradient(to right, #3192e1, #3ebaf8);
+    height: 35px;
+    width:210px;
+    padding:1px;
+    padding-top:2px;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.best_sellers h4{
+    color:#FFF;
+    margin: 1px 0px;
+}
+
+.limited_offers h4{
+    color:#FFF;
+    margin: 1px 0px;
+}
+
+.accesseries h4{
+    color:#FFF;
+    margin: 1px 0px;
+}
+
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  
+  }
+
+ .card{
+     cursor: pointer;
+     margin:3px;
+ }
+
+ .card-img-top{
+    max-height:170px
+}
+
+.under_10k{
+    background-image: linear-gradient(to right,#563e7c ,#605196);
+    height: 35px; 
+    width:150px; 
+    padding:1px;
+    padding-top:2px;
+    text-align:center;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    }
+
+    .under_10k h4{
+        color:#FFF;
+        margin: 1px 0px;
+    }
+
+    @media screen and (max-width: 640px){
+    h6{
+        font-size:11px!important;
+    }
+    h5{
+        font-size:15px!important
+    }
+    h4{
+        font-size:20px!important;
+    }
+    .under_10k h4{
+        margin: 3px 0px;
+    }
+
+    .best_sellers h4{
+        margin: 3px 0px;
+       }
+
+       .lastest_product h4{
+        margin: 3px 0px;
+        }
+
+        .under_10k h4{
+          margin: 3px 0px;
+        }
+
+        .limited_offers h4{
+            margin: 3px 0px;
+        }
+        
+        .accesseries h4{
+            margin: 3px 0px;
+        }
+
+    }
+
+    @media screen and (max-width: 576px){
+    .hide_last{display:none}
+    }
+    
+
+
+/*Footer*/
+.footer_panel{
+    width:100%;
+    height:80px;
+    background-color:#105079 
+}
+.footer_focus_img{
+    width:120px;
+    margin-left:10px;
+    position: relative;
+    top:6px;   
+}
+.footer_social_media{
+    float:right;
+    margin-top:-2.9em;
+    margin-right:10px;  
+}
+.social_media_img{
+    width:35px;
+    height:35px;   
+}
+
+@media screen and (min-width: 1300px){
+    .card{
+        height:320px;
+    }
+    .card-img-top{
+      max-height:220px
+  }
+}

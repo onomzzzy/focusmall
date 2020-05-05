@@ -1,0 +1,45 @@
+
+<div class="page">
+    <div class="login-body">
+        <div class="login-panel ui-fluid">
+            <div class="login-panel-header">
+            <img src="../../assets/images/icons/logo.png" alt="">
+            </div>
+            <div class="login-panel-content">
+                <form [formGroup]="userform" (ngSubmit)="onSubmit(userform.value)">
+                <div class="ui-g">
+                    <div class="ui-g-12">
+                        <h1>Create a Focus Account</h1>
+                    </div>
+                    <div class="ui-g-12">
+                        <span class="ui-float-label">
+                            <input id="float-input" formControlName="username" type="text" size="30" pInputText> 
+                            <label for="float-input">Username</label>
+                        </span>
+                    </div>
+                    <div class="ui-g-12">
+                        <span class="ui-float-label">
+                            <input id="float-input" formControlName="password" type="password" size="30" pInputText> 
+                            <label for="float-input">Password(min 6)</label>
+                        </span>
+                    </div>
+
+                    <div class="ui-g-12">
+                        <span class="ui-float-label">
+                            <input id="float-input" formControlName="confirmpassword" type="password" size="30" pInputText> 
+                            <label for="float-input">Confirm Password(min 6)</label>
+                        </span>
+                    </div>
+                  
+                    <div class="ui-g-12">
+                    <button pButton type="submit" label="Register" [disabled]="!userform.valid"></button>
+                    </div>
+                    <div class="ui-g-12">
+                        <span class="account_d">Already have an account? <a routerLink="/home/login">Login</a> now.</span>
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div></div>
+</div>
+

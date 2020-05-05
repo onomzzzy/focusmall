@@ -1,0 +1,2172 @@
+<!--Desktop View-->
+<div class="desktop">
+  <div id="header">
+    <app-header></app-header>
+  </div>
+
+  <div class="content">
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="col-2">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <app-sidenavigation></app-sidenavigation>
+              </div>
+              <div class="col-12">
+                <div class="push">
+                  <app-whyfocus></app-whyfocus>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-10">
+          <div>
+            <div [@routeAnimations]="prepareRoute(outlet)">
+              <router-outlet #outlet="outlet"></router-outlet>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="push">
+      <app-footer></app-footer>
+    </div>
+  </div>
+</div>
+<!--Desktop View-->
+
+<div class="tablet"></div>
+<div class="mobile"></div>
+
+<!--<div class="page">
+
+
+     Mobile side nav
+
+     <div id="mobileSideNav">
+        
+            <div class="focus_name">
+              <div class="p-grid">
+               <div class="p-col-9">
+                <div>
+                  <img class="m_side_logo" src="../../assets/images/icons/logo2.png">
+                </div>
+                </div>
+              </div>
+            
+            </div>
+             
+     
+      <div>
+         
+         <div class="divider_focus"></div>
+
+        <div class=" searchbar padit">
+          <div class="search_margin">
+          <div class="p-grid">
+          <div class="p-col-10">
+          <input class="search_input" placeholder="{{placeholder}}" 
+          [(ngModel)]="search" type="text" size="30" pInputText />
+          </div>
+         <div class="p-col-2">
+           <div style="position:relative;left:-7px">
+         <button class="search_btn mobile" (click)="onSearch()" type="button" pButton icon="pi pi-search"></button>
+         </div>
+         </div>
+         </div>
+        </div>
+
+      </div>
+    
+    
+     
+        <div id="accordion" class="categories">
+    
+         
+           
+          <a  data-toggle="collapse" href="#unAcc" role="button" 
+          aria-expanded="true" aria-controls="unAcc">
+          <div *ngIf="user == null">
+          <div class="p-grid">
+            <div class="p-col-9">
+              <h3>Hello, sign in </h3>
+            </div>
+            <div class="p-col-3">
+              <div align="right">
+              <img class="nav_img_profile nav_ad" src="../../assets/images/icons/user.png">
+              </div>
+            </div>
+          </div>
+          </div>
+
+          <div *ngIf="user!=null">
+            <div class="p-grid">
+              <div class="p-col-9">
+                <h3>Hello, {{user.firstname}}</h3>
+              </div>
+              <div class="p-col-3">
+                <div align="right">
+                <img class="nav_img_profile_2 nav_ad" src="{{user.pix}}">
+                </div>
+              </div>
+            </div>
+            </div>
+
+          </a>
+    
+          <div class="collapse" id="unAcc" data-parent="#accordion">
+              <div class="collapse_body">
+              
+                <div class="collapse_content">
+                  <div class="router_link mobile" (click)="onAcc(log)">
+                  <div class="p-grid">
+                   
+                    <div class="p-col-9">
+                      <h4 class="h3_ad">{{log}}</h4>
+                    </div>
+                    <div class="p-col-3">
+                      <img class="nav_img_profile" src="../../assets/images/icons/power-off.png">
+                    </div>
+                   
+                  </div> 
+                  </div>
+                </div>
+
+             <div class="divider"></div>
+    
+             <div class="collapse_content">
+                <div class="router_link mobile" (click)="onAcc(reg)">
+                <div class="p-grid">
+                 
+                  <div class="p-col-9">
+                    <h4 class="h3_ad">{{reg}}</h4>
+                  </div>
+                  <div class="p-col-3">
+                    <img class="nav_img_profile" src="../../assets/images/icons/{{regPix}}">
+                  </div>
+                 
+                </div> 
+                </div>
+              </div>
+    
+              </div>
+              </div>
+    
+     
+          <div class="divider"></div>
+    
+    
+          <div class="padit">
+            <div id="store" class="router_link mobile" routerLink="/home/store">
+              <div class="p-grid">
+                <div class="p-col-9">
+                  <h3 class="content_margin">Store</h3>
+                </div>
+                <div class="p-col-3">
+                  <div class="special_adjust">
+                  <div align="right">
+                  <img class="nav_img nav_ad" src="../../assets/images/icons/front-store.png">
+                  </div>
+                  </div>
+                </div>
+               
+              </div>
+              </div>
+              </div>
+          
+          
+
+          <div class="divider"></div>
+    
+          <a data-toggle="collapse" href="#laptops" role="button" 
+          aria-expanded="false" aria-controls="laptops">
+          
+          <div class="p-grid content_height">
+            <div class="p-col-9">
+              <h3>Laptops</h3>
+            </div>
+            <div class="p-col-3">
+              <div align="right">
+                <h3><i class="pi pi-chevron-right"></i></h3>
+              </div>
+            </div>
+          </div>
+          
+          </a>
+          <div class="collapse" id="laptops" data-parent="#accordion">
+            <div class="collapse_body">
+
+
+              <div class="collapse_content">
+                <div class="router_link mobile" (click)="searchStore('new used')">
+                <div class="p-grid">
+                  <div class="p-col-12">
+                    <h4>All</h4>
+                  </div>
+                </div> 
+                </div>
+              </div>
+              <div class="divider"></div>
+
+            <div class="collapse_content">
+              <div class="router_link mobile" (click)="searchStore('acer')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Acer</h4>
+                </div>
+              </div> 
+              </div>
+            </div>
+            <div class="divider"></div>
+            <div class="collapse_content">
+              <div class="router_link mobile" (click)="searchStore('apple')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Apple</h4>
+                </div>
+              </div> 
+              </div>
+
+            </div>
+    
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link mobile" (click)="searchStore('asus')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Asus</h4>
+                </div>
+              </div> 
+            </div>
+            </div>
+    
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link mobile" (click)="searchStore('clevo')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Clevo</h4>
+                </div>
+              </div> 
+            </div>
+            </div>
+    
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link mobile" (click)="searchStore('dell')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Dell</h4>
+                </div>
+              </div>
+            </div> 
+            </div>
+    
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link mobile" (click)="searchStore('fujitsu')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Fujitsu</h4>
+                </div>
+              </div>
+            </div> 
+            </div>
+    
+    
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link mobile" (click)="searchStore('gigabyte')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Gigabyte</h4>
+                </div>
+              </div>
+            </div> 
+            </div>
+    
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link mobile" (click)="searchStore('google')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Google</h4>
+                </div>
+              </div> 
+            </div>
+            </div>
+    
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link mobile" (click)="searchStore('hp')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Hp</h4>
+                </div>
+              </div>
+            </div> 
+            </div>
+    
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link mobile" (click)="searchStore('huawei')"> 
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Huawei</h4>
+                </div>
+              </div>
+              </div> 
+            </div>
+    
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link mobile" (click)="searchStore('iball')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Iball</h4>
+                </div>
+              </div>
+              </div> 
+            </div>
+
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link mobile" (click)="searchStore('lenovo')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Lenovo</h4>
+                </div>
+              </div>
+              </div> 
+            </div>
+
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link mobile" (click)="searchStore('lg')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>LG</h4>
+                </div>
+              </div>
+              </div> 
+            </div>
+
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link mobile" (click)="searchStore('medion')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Medion</h4>
+                </div>
+              </div>
+              </div> 
+            </div>
+
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link mobile" (click)="searchStore('microsoft')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Microsoft</h4>
+                </div>
+              </div>
+              </div> 
+            </div>
+
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link mobile" (click)="searchStore('panasonic')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Panasonic</h4>
+                </div>
+              </div>
+              </div> 
+            </div>
+
+
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link mobile" (click)="searchStore('razer')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Razer</h4>
+                </div>
+              </div>
+              </div> 
+            </div>
+
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link mobile" (click)="searchStore('samsung')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Samsung</h4>
+                </div>
+              </div>
+              </div> 
+            </div>
+
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link mobile" (click)="searchStore('toshiba')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Toshiba</h4>
+                </div>
+              </div>
+              </div> 
+            </div>
+
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link mobile" (click)="searchStore('sony vaio')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Sony Vaio</h4>
+                </div>
+              </div>
+              </div> 
+            </div>
+
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link mobile" (click)="searchStore('xiaomi')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Xiaomi</h4>
+                </div>
+              </div>
+              </div> 
+            </div>
+    
+    
+    
+    
+            </div>
+          </div>
+          
+    
+     
+
+        
+           <div class="divider"></div>
+        
+
+
+         
+           
+           <a data-toggle="collapse" href="#lc" role="button" 
+           aria-expanded="false" aria-controls="lc">
+           <div>
+           <div class="p-grid content_height">
+             <div class="p-col-9">
+               <h3>PC Components</h3>
+             </div>
+             <div class="p-col-3"> 
+             <div align="right">
+               <h3> <i class="pi pi-chevron-right"></i></h3>
+             </div>
+             </div>
+           </div>
+           </div>
+           </a>
+     
+           <div class="collapse" id="lc" data-parent="#accordion">
+               <div class="collapse_body">
+       
+        <div class="collapse_content">  
+          <div class="router_link mobile" (click)="searchStore('battery')">
+            <div class="p-grid">
+              <div class="p-col-9">
+                <h3>Battery</h3>
+              </div>
+              <div class="p-col-3">
+                <div class="special_adjust">
+                <img class="nav_img" src="../../assets/images/icons/battery.png">
+              </div>
+              </div>
+            </div>
+          </div>     
+          </div>
+       
+
+      <div class="divider"></div>
+
+      
+             
+        <div class="collapse_content">  
+          <div class="router_link mobile" (click)="searchStore('keyboard')">
+            <div class="p-grid">
+              <div class="p-col-9">
+                <h3>Keyboard</h3>
+              </div>
+              <div class="p-col-3">
+                <div class="special_adjust">
+                <img class="nav_img" src="../../assets/images/icons/keyboard.png">
+              </div>
+              </div>
+            </div>
+          </div>     
+          </div>
+      
+
+        <div class="divider"></div>
+              
+        <div class="collapse_content">  
+          <div class="router_link mobile" (click)="searchStore('processor')">
+            <div class="p-grid">
+              <div class="p-col-9">
+                <h3>Processor</h3>
+              </div>
+              <div class="p-col-3">
+                <div class="special_adjust">
+                <img class="nav_img" src="../../assets/images/icons/processor.png">
+              </div>
+              </div>
+            </div>
+          </div>     
+          </div>
+      
+        
+        <div class="divider"></div>
+     
+          <div class="collapse_content">
+            
+             <div class="router_link mobile" (click)="searchStore('graphics card')">
+
+              <div class="p-grid">
+                <div class="p-col-9">
+                  <h3>Graphics Card</h3>
+                </div>
+                <div class="p-col-3">
+                  <img class="nav_img" src="../../assets/images/icons/gpu.png">
+                </div>
+              </div> 
+
+             </div>
+            
+              
+
+          </div>
+
+          <div class="divider"></div>
+     
+          <div class="collapse_content">
+           
+             <div class="router_link mobile" (click)="searchStore('mother board')">
+
+              <div class="p-grid">
+                <div class="p-col-9">
+                  <h3>Mother Board</h3>
+                </div>
+                <div class="p-col-3">
+                  <img class="nav_img" src="../../assets/images/icons/motherboard.png">
+                </div>
+              </div> 
+
+             </div>
+            
+             
+
+          </div>
+
+          <div class="divider"></div>
+     
+          <div class="collapse_content">
+            
+             <div class="router_link mobile" (click)="searchStore('touch pad')">
+
+              <div class="p-grid">
+                <div class="p-col-9">
+                  <h3>Touch Pad</h3>
+                </div>
+                <div class="p-col-3">
+                  <img class="nav_img" src="../../assets/images/icons/touchpad.png">
+                </div>
+              </div> 
+
+             </div>
+            
+             
+
+          </div>
+
+
+          <div class="divider"></div>
+     
+        <div class="collapse_content">    
+       
+            <div class="router_link mobile" (click)="searchStore('charger')">
+            <div class="p-grid">
+              <div class="p-col-9">
+                <h3>Charger</h3>
+              </div>
+              <div class="p-col-3">
+                <div class="special_adjust">
+                <img class="nav_img" src="../../assets/images/icons/magsafe.png">
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          </div>
+
+          <div class="divider"></div>
+     
+          <div class="collapse_content">
+            
+             <div class="router_link mobile" (click)="searchStore('ram')">
+
+              <div class="p-grid">
+                <div class="p-col-9">
+                  <h3>Ram</h3>
+                </div>
+                <div class="p-col-3">
+                  <img class="nav_img" src="../../assets/images/icons/ram.png">
+                </div>
+              </div> 
+
+             </div>
+            
+             
+
+          </div>
+
+
+          <div class="divider"></div>
+     
+          <div class="collapse_content">
+         
+             <div class="router_link mobile" (click)="searchStore('ssd')">
+
+              <div class="p-grid">
+                <div class="p-col-9">
+                  <h3>SSD</h3>
+                </div>
+                <div class="p-col-3">
+                  <img class="nav_img" src="../../assets/images/icons/ssd-card.png">
+                </div>
+              </div> 
+
+             </div>
+            
+            
+
+          </div>
+
+          
+          <div class="divider"></div>
+     
+          <div class="collapse_content">
+           
+             <div class="router_link mobile" (click)="searchStore('hdd')">
+
+              <div class="p-grid">
+                <div class="p-col-9">
+                  <h3>Hard Drive Disk</h3>
+                </div>
+                <div class="p-col-3">
+                  <img class="nav_img" src="../../assets/images/icons/harddrive.png">
+                </div>
+              </div> 
+
+             </div>
+            
+             
+
+          </div>
+
+          
+          <div class="divider"></div>
+     
+          <div class="collapse_content">
+           
+             <div class="router_link mobile" (click)="searchStore('paper screen')">
+
+              <div class="p-grid">
+                <div class="p-col-9">
+                  <h3>Paper Screen</h3>
+                </div>
+                <div class="p-col-3">
+                  <img class="nav_img" src="../../assets/images/icons/monitor1.png">
+                </div>
+              </div> 
+
+             </div>
+            
+             
+
+          </div>
+
+
+          
+          <div class="divider"></div>
+     
+          <div class="collapse_content">
+           
+             <div class="router_link mobile" (click)="searchStore('moduless')">
+
+              <div class="p-grid">
+                <div class="p-col-9">
+                  <h3>Moduless</h3>
+                </div>
+                <div class="p-col-3">
+                  <img class="nav_img" src="../../assets/images/icons/big-flat-screen.png">
+                </div>
+              </div> 
+
+             </div>
+            
+           
+
+          </div>
+
+          
+          <div class="divider"></div>
+     
+          <div class="collapse_content">
+            
+             <div class="router_link mobile" (click)="searchStore('module')">
+
+              <div class="p-grid">
+                <div class="p-col-9">
+                  <h3>Module Screen</h3>
+                </div>
+                <div class="p-col-3">
+                  <img class="nav_img" src="../../assets/images/icons/tablet-screen-in-perspective.png">
+                </div>
+              </div> 
+
+             </div>
+            
+              
+
+          </div>
+        
+              </div>
+              
+          </div>
+
+          
+         
+    
+          
+          <div class="divider"></div>
+
+
+          <a data-toggle="collapse" href="#access" role="button" 
+          aria-expanded="false" aria-controls="access">
+          <div>
+          <div class="p-grid content_height">
+              <div class="p-col-9">
+                <h3>Accessaries</h3>
+              </div>
+              <div class="p-col-3">
+               <div>
+                 <div align="right">
+                <h3><i class="pi pi-chevron-right" ></i></h3>
+                </div>
+                </div>
+              </div>
+          </div>
+          </div>
+          </a>
+
+          <div class="collapse" id="access" data-parent="#accordion">
+            <div class="collapse_body">
+
+            <div class="collapse_content">
+           
+            <div class="router_link mobile" (click)="searchStore('bag')">
+            <div class="p-grid">
+           <div class="p-col-9">
+             <h3>Bags</h3>
+           </div>
+           <div class="p-col-3">
+             <div class="special_adjust">
+             <img class="nav_img" src="../../assets/images/icons/backpack.png">
+           </div>
+           </div>
+         </div>
+          </div>
+          
+         </div>
+
+         
+         <div class="divider"></div>
+     
+         <div class="collapse_content">
+          
+            <div class="router_link mobile" (click)="searchStore('mouse')">
+
+             <div class="p-grid">
+               <div class="p-col-9">
+                 <h3>Mouse</h3>
+               </div>
+               <div class="p-col-3">
+                 <img class="nav_img" src="../../assets/images/icons/mouse.png">
+               </div>
+             </div> 
+
+            </div>
+           
+            
+
+         </div>
+
+         <div class="divider"></div>
+    
+         <div class="collapse_content">
+          
+            <div class="router_link mobile" (click)="searchStore('usb')">
+
+             <div class="p-grid">
+               <div class="p-col-9">
+                 <h3>Usb Drive</h3>
+               </div>
+               <div class="p-col-3">
+                 <img class="nav_img" src="../../assets/images/icons/usb.png">
+               </div>
+             </div> 
+
+            </div>
+           
+            
+
+         </div>
+
+         <div class="divider"></div>
+    
+         <div class="collapse_content">
+          
+            <div class="router_link mobile" (click)="searchStore('enclosure')">
+
+             <div class="p-grid">
+               <div class="p-col-9">
+                 <h3>Enclosure</h3>
+               </div>
+               <div class="p-col-3">
+                 <img class="nav_img" src="../../assets/images/icons/enclosure.png">
+               </div>
+             </div> 
+
+            </div>
+           
+            
+
+         </div>
+
+         <div class="divider"></div>
+    
+         <div class="collapse_content">
+        
+            <div class="router_link mobile" (click)="searchStore('controller')">
+
+             <div class="p-grid">
+               <div class="p-col-9">
+                 <h3>Controller</h3>
+               </div>
+               <div class="p-col-3">
+                 <img class="nav_img" src="../../assets/images/icons/controller.png">
+               </div>
+             </div> 
+
+            </div>
+           
+            
+
+         </div>
+
+         <div class="divider"></div>
+    
+         <div class="collapse_content">
+         
+           <div class="router_link mobile" (click)="searchStore('headset earpiece')">
+
+             <div class="p-grid">
+               <div class="p-col-9">
+                 <h3>Head Set</h3>
+               </div>
+               <div class="p-col-3">
+                 <img class="nav_img" src="../../assets/images/icons/headphones.png">
+               </div>
+             </div> 
+
+            </div>
+           
+        
+
+         </div>
+
+        
+          <div class="divider"></div>
+         
+
+         <div class="collapse_content">
+         
+        <div class="router_link mobile" (click)="searchStore('cable')">
+        <div class="p-grid">
+       <div class="p-col-9">
+         <h3>Cables</h3>
+       </div>
+       <div class="p-col-3">
+         <div class="special_adjust">
+         <img class="nav_img" src="../../assets/images/icons/cable.png">
+       </div>
+       </div>
+     </div>
+      </div>
+      
+     </div>
+
+         </div>
+         </div>
+
+
+
+        
+    
+           
+            <div class="divider"></div>
+           
+      
+            
+            <div class="padit">
+              <div class="router_link" (click)="changeInfo(0)" data-toggle="modal" data-target="#infoModal">
+              <div class="p-grid">
+                <div class="p-col-9">
+                  <h3 class="content_margin">Software</h3>
+                </div>
+                <div class="p-col-3">
+                  <div class="special_adjust">
+                    <div align="right">
+                  <img class="nav_img nav_ad" src="../../assets/images/icons/software.png">
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            
+    
+    
+              
+              <div class="divider"></div>
+            
+        
+             
+              <div>
+                <div class="p-grid">
+                  <div class="p-col-9">
+                    <div style="position: relative;top:.4em">
+                    <h3>Contact Us</h3>
+                    </div>
+                  </div>
+                  <div class="p-col-3">
+                    <div align="right" style="position: relative;top:.4em">
+                    <img class="nav_img nav_ad2" src="../../assets/images/icons/help.png">
+                    </div>
+                  </div>
+                 
+                  <div class="p-col-12">
+
+                    <div class="collapse_body">
+                    
+                    <div style="position: relative;top:.4em">
+                    <div class="p-grid">
+                      <div class="p-col-2">
+                        <img class="contact_us" src="../../assets/images/icons/placeholder.png">
+                      </div>
+                      <div class="p-col-10">
+                        <div style="position:relative;left:10px;">
+                      <h4 style="font-weight:600;color:#FFF;">Focus Mega Concert</h4>
+                      <h6 style="color:#FFF;">Shop 664 Mega Plaza</h6>
+                      <h6 style="color:#FFF;">off Ojo Alaba road</h6>
+                      </div>
+                      </div>
+                      <div class="p-col-2">
+                        <img src="../../assets/images/icons/phone.png" style="width:30px;height:30px;position:relative;left:.5em;">
+                      </div>
+                      <div class="p-col-10">
+                        <h6 style="color:#FFF;font-weight:600;position:relative;top:.3em">+2348035826579</h6>
+                      </div>
+    
+                      <div class="p-col-2">
+                        <img src="../../assets/images/icons/gmail.png" style="width:35px;height:35px;margin-left:8px;">
+                      </div>
+                      <div class="p-col-10">
+                        <h6 style="color:#FFF;position: relative;top:.3em;left:5px;font-weight:600;">onomzzzy@gmail.com</h6>
+                      </div>
+
+                      <div class="p-col-2">
+                        <img src="../../assets/images/icons/painting.png" style="width:45px;height:45px">
+                       
+                      </div>
+                      <div class="p-col-10">
+                        <div (click)="changeInfo(1)" class="router_link" data-toggle="modal" data-target="#infoModal"  style="text-align:center;position: relative;left:-.8em;">
+                          <h6>Created and Designed by</h6>
+                          <h4 style="font-weight:600;">O N O M E C O D E</h4>
+
+                        </div>
+                      </div>
+    
+    
+                    </div>
+                    </div>
+
+                    </div>
+    
+                  </div>
+    
+                </div>
+              </div>
+            
+    
+    
+        </div>
+      
+    
+      </div>
+
+    </div>
+  
+
+
+    
+    <div class="desktop_side_nav">
+
+      <div>
+        
+        
+        <div class="focus_name">
+          <div class="p-grid">
+            <div class="p-col-12">
+              <div>
+                <img class="d_side_logo" src="../../assets/images/icons/logo2.png">
+              </div>
+            </div>
+          </div>
+        
+        </div>
+       
+         <div class="divider_focus"></div>
+
+        <div class=" searchbar padit">
+          <div class="search_margin">
+            <div class="p-grid">
+            <div class="p-col-10">
+            <input class="search_input" placeholder="{{placeholder}}" 
+            [(ngModel)]="search" type="text" size="30" pInputText />
+            </div>
+           <div class="p-col-2">
+           <button class="search_btn" (click)="onSearch()" type="button" pButton icon="pi pi-search"></button>
+           </div>
+           </div>
+          </div>
+      </div>
+      
+        <div id="accordion2" class="categories">
+    
+         
+           
+          <a  data-toggle="collapse" href="#unAcc" role="button" 
+          aria-expanded="true" aria-controls="unAcc">
+
+          <div *ngIf="user == null">
+          <div class="p-grid">
+            <div class="p-col-9">
+              <h3>Hello, sign in</h3>
+            </div>
+            <div class="p-col-3">
+              <div align="right">
+              <img class="nav_img_profile nav_ad" src="../../assets/images/icons/user.png">
+              </div>
+            </div>
+          </div>
+          </div>
+
+          <div *ngIf="user!=null">
+            <div class="p-grid">
+              <div class="p-col-9">
+                <h3>Hello, {{user.firstname}}</h3>
+              </div>
+              <div class="p-col-3">
+                <div align="right">
+                <img class="nav_img_profile_2 nav_ad" src="{{user.pix}}">
+                </div>
+              </div>
+            </div>
+            </div>
+
+          </a>
+    
+          <div class="collapse" id="unAcc" data-parent="#accordion2">
+              <div class="collapse_body">
+
+              <div class="collapse_content">
+                <div class="router_link" (click)="onAcc(log)">
+                <div class="p-grid">
+                  <div class="p-col-9">
+                    <h4 class="h4_ad">{{log}}</h4>
+                  </div>
+                  <div class="p-col-3">
+                    <img class="nav_img_profile" src="../../assets/images/icons/power-off.png">
+                  </div>
+                </div> 
+              </div>
+              
+              </div>
+
+             <div class="divider"></div>
+    
+             <div class="collapse_content">
+                <div class="router_link" (click)="onAcc(reg)">
+                <div class="p-grid">
+                 
+                  <div class="p-col-9">
+                    <h4 class="h4_ad">{{reg}}</h4>
+                  </div>
+                  <div class="p-col-3">
+                    <img class="nav_img_profile" src="../../assets/images/icons/{{regPix}}">
+                  </div>
+                 
+                </div> 
+                </div>
+              </div>
+    
+              </div>
+              </div>
+    
+        
+
+          <div class="divider"></div>
+          
+          
+    
+          <div class="padit">
+            <div class="router_link" routerLink="/home/store">
+              <div class="p-grid">
+                <div class="p-col-9">
+                  <h3 class="content_margin">Store</h3>
+                </div>
+                <div class="p-col-3">
+                  <div class="special_adjust">
+                  <div align="right">
+                  <img class="nav_img nav_ad" src="../../assets/images/icons/front-store.png">
+                  </div>
+                  </div>
+                </div>
+               
+              </div>
+              </div>
+              </div>
+          
+          
+
+          <div class="divider"></div>
+         
+    
+           <div class="padit">
+            <div class="router_link" data-toggle="modal" data-target="#cartModal">
+              <div class="p-grid">
+                <div class="p-col-8">
+                  <h3 class="content_margin">Cart</h3>
+                </div>
+                <div class="p-col-4">
+                  <div class="special_adjust">
+                  <div align="right">
+                    <div>
+                      <span><img class="nav_img nav_ad cart_desktop" src="../../assets/images/icons/shopping-cart.png">  
+                     <span style="position:relative;top:-.8em;left:-.4em;" class="badge badge-danger">{{cart}}</span></span>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+               
+              </div>
+              </div>
+              </div>
+         
+    
+          <div class="divider"></div>
+    
+         
+          <a data-toggle="collapse" href="#laptops" role="button" 
+          aria-expanded="false" aria-controls="laptops">
+          <div class="p-grid content_height2">
+            <div class="p-col-9">
+              <h3>Laptops</h3>
+            </div>
+            <div class="p-col-3">
+              <div align="right">
+                <h3><i class="pi pi-chevron-right"></i></h3>
+              </div>
+            </div>
+          </div>
+          </a>
+          <div class="collapse" id="laptops" data-parent="#accordion2">
+            <div class="collapse_body">
+
+              <div class="collapse_content">
+                <div class="router_link" (click)="searchStore('new used')">
+                <div class="p-grid">
+                  <div class="p-col-12">
+                    <h4>All</h4>
+                  </div>
+                </div> 
+                </div>
+              </div>
+              <div class="divider"></div>
+
+            <div class="collapse_content">
+              <div class="router_link" (click)="searchStore('acer')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Acer</h4>
+                </div>
+              </div> 
+              </div>
+            </div>
+            <div class="divider"></div>
+            <div class="collapse_content">
+              <div class="router_link" (click)="searchStore('apple')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Apple</h4>
+                </div>
+              </div> 
+              </div>
+
+            </div>
+    
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link" (click)="searchStore('asus')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Asus</h4>
+                </div>
+              </div> 
+            </div>
+            </div>
+    
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link" (click)="searchStore('clevo')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Clevo</h4>
+                </div>
+              </div> 
+            </div>
+            </div>
+    
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link" (click)="searchStore('dell')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Dell</h4>
+                </div>
+              </div>
+            </div> 
+            </div>
+    
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link" (click)="searchStore('fujitsu')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Fujitsu</h4>
+                </div>
+              </div>
+            </div> 
+            </div>
+    
+    
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link" (click)="searchStore('gigabyte')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Gigabyte</h4>
+                </div>
+              </div>
+            </div> 
+            </div>
+    
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link" (click)="searchStore('google')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Google</h4>
+                </div>
+              </div> 
+            </div>
+            </div>
+    
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link" (click)="searchStore('hp')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Hp</h4>
+                </div>
+              </div>
+            </div> 
+            </div>
+    
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link" (click)="searchStore('huawei')"> 
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Huawei</h4>
+                </div>
+              </div>
+              </div> 
+            </div>
+    
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link" (click)="searchStore('iball')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Iball</h4>
+                </div>
+              </div>
+              </div> 
+            </div>
+
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link mobile" (click)="searchStore('lenovo')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Lenovo</h4>
+                </div>
+              </div>
+              </div> 
+            </div>
+
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link" (click)="searchStore('lg')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>LG</h4>
+                </div>
+              </div>
+              </div> 
+            </div>
+
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link" (click)="searchStore('medion')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Medion</h4>
+                </div>
+              </div>
+              </div> 
+            </div>
+
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link" (click)="searchStore('microsoft')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Microsoft</h4>
+                </div>
+              </div>
+              </div> 
+            </div>
+
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link mobile" (click)="searchStore('panasonic')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Panasonic</h4>
+                </div>
+              </div>
+              </div> 
+            </div>
+
+
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link" (click)="searchStore('razer')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Razer</h4>
+                </div>
+              </div>
+              </div> 
+            </div>
+
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link" (click)="searchStore('samsung')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Samsung</h4>
+                </div>
+              </div>
+              </div> 
+            </div>
+
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link" (click)="searchStore('toshiba')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Toshiba</h4>
+                </div>
+              </div>
+              </div> 
+            </div>
+
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link mobile" (click)="searchStore('sony vaio')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Sony Vaio</h4>
+                </div>
+              </div>
+              </div> 
+            </div>
+
+            <div class="divider"></div>
+    
+            <div class="collapse_content">
+              <div class="router_link mobile" (click)="searchStore('xiaomi')">
+              <div class="p-grid">
+                <div class="p-col-12">
+                  <h4>Xiaomi</h4>
+                </div>
+              </div>
+              </div> 
+            </div>
+
+    
+    
+    
+            </div>
+          </div>
+          
+    
+    
+
+          
+           <div class="divider"></div>
+          
+
+
+          
+           
+           <a data-toggle="collapse" href="#lc" role="button" 
+           aria-expanded="false" aria-controls="lc">
+           <div>
+           <div class="p-grid content_height2">
+             <div class="p-col-9">
+               <h3>PC Components</h3>
+             </div>
+             <div class="p-col-3"> 
+             <div align="right">
+               <h3> <i class="pi pi-chevron-right"></i></h3>
+             </div>
+             </div>
+           </div>
+           </div>
+           </a>
+     
+           <div class="collapse" id="lc" data-parent="#accordion2">
+               <div class="collapse_body">
+               <div class="collapse_content">
+                
+          <div>
+            <div class="router_link mobile" (click)="searchStore('battery')">
+            <div class="p-grid">
+              <div class="p-col-9">
+                <h3>Battery</h3>
+              </div>
+              <div class="p-col-3">
+                <div class="special_adjust">
+                <img class="nav_img" src="../../assets/images/icons/battery.png">
+              </div>
+              </div>
+            </div>
+            </div>
+
+          </div>
+        
+               
+          </div>
+
+      <div class="divider"></div>
+     
+        <div class="collapse_content">    
+        
+            <div class="router_link" (click)="searchStore('keyboard')">
+            <div class="p-grid">
+              <div class="p-col-9">
+                <h3>Keyboard</h3>
+              </div>
+              <div class="p-col-3">
+                <div class="special_adjust">
+                <img class="nav_img" src="../../assets/images/icons/keyboard.png">
+                </div>
+              </div>
+            </div>
+          </div>
+         
+          </div>
+
+          <div class="divider"></div>
+     
+          <div class="collapse_content">
+           
+             <div class="router_link" (click)="searchStore('processor')">
+
+              <div class="p-grid">
+                <div class="p-col-9">
+                  <h3>Processor</h3>
+                </div>
+                <div class="p-col-3">
+                  <img class="nav_img" src="../../assets/images/icons/processor.png">
+                </div>
+              </div> 
+
+             </div>
+            
+           
+
+          </div>
+
+          <div class="divider"></div>
+     
+          <div class="collapse_content">
+           
+             <div class="router_link" (click)="searchStore('graphics card')">
+
+              <div class="p-grid">
+                <div class="p-col-9">
+                  <h3>Graphics Card</h3>
+                </div>
+                <div class="p-col-3">
+                  <img class="nav_img" src="../../assets/images/icons/gpu.png">
+                </div>
+              </div> 
+
+             </div>
+            
+             
+
+          </div>
+
+          <div class="divider"></div>
+     
+          <div class="collapse_content">
+           
+             <div class="router_link" (click)="searchStore('mother board')">
+
+              <div class="p-grid">
+                <div class="p-col-9">
+                  <h3>Mother Board</h3>
+                </div>
+                <div class="p-col-3">
+                  <img class="nav_img" src="../../assets/images/icons/motherboard.png">
+                </div>
+              </div> 
+
+             </div>
+            
+             
+
+          </div>
+
+          <div class="divider"></div>
+     
+          <div class="collapse_content">
+            
+             <div class="router_link" (click)="searchStore('touch pad')">
+
+              <div class="p-grid">
+                <div class="p-col-9">
+                  <h3>Touch Pad</h3>
+                </div>
+                <div class="p-col-3">
+                  <img class="nav_img" src="../../assets/images/icons/touchpad.png">
+                </div>
+              </div> 
+
+             </div>
+            
+            
+
+          </div>
+
+
+          <div class="divider"></div>
+     
+        <div class="collapse_content">    
+          
+            <div class="router_link" (click)="searchStore('charger')">
+            <div class="p-grid">
+              <div class="p-col-9">
+                <h3>Charger</h3>
+              </div>
+              <div class="p-col-3">
+                <div class="special_adjust">
+                <img class="nav_img" src="../../assets/images/icons/magsafe.png">
+                </div>
+              </div>
+            </div>
+          </div>
+         
+          </div>
+
+
+          <div class="divider"></div>
+     
+          <div class="collapse_content">
+            
+             <div class="router_link" (click)="searchStore('ssd')">
+
+              <div class="p-grid">
+                <div class="p-col-9">
+                  <h3>SSD</h3>
+                </div>
+                <div class="p-col-3">
+                  <img class="nav_img" src="../../assets/images/icons/ssd-card.png">
+                </div>
+              </div> 
+
+             </div>
+            
+            
+
+          </div>
+
+          
+          <div class="divider"></div>
+     
+          <div class="collapse_content">
+          
+             <div class="router_link" (click)="searchStore('hdd')">
+
+              <div class="p-grid">
+                <div class="p-col-9">
+                  <h3>Hard Drive Disk</h3>
+                </div>
+                <div class="p-col-3">
+                  <img class="nav_img" src="../../assets/images/icons/harddrive.png">
+                </div>
+              </div> 
+
+             </div>
+            
+             
+
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="collapse_content">
+            
+             <div class="router_link" (click)="searchStore('ram')">
+
+              <div class="p-grid">
+                <div class="p-col-9">
+                  <h3>Ram</h3>
+                </div>
+                <div class="p-col-3">
+                  <img class="nav_img" src="../../assets/images/icons/ram.png">
+                </div>
+              </div> 
+
+             </div>
+            
+            
+
+          </div>
+
+          
+          <div class="divider"></div>
+     
+          <div class="collapse_content">
+            
+             <div class="router_link" (click)="searchStore('paper screen')">
+
+              <div class="p-grid">
+                <div class="p-col-9">
+                  <h3>Paper Screen</h3>
+                </div>
+                <div class="p-col-3">
+                  <img class="nav_img" src="../../assets/images/icons/monitor1.png">
+                </div>
+              </div> 
+
+             </div>
+            
+             
+
+          </div>
+
+
+          
+          <div class="divider"></div>
+     
+          <div class="collapse_content">
+            
+             <div class="router_link" (click)="searchStore('moduless')">
+
+              <div class="p-grid">
+                <div class="p-col-9">
+                  <h3>Moduless</h3>
+                </div>
+                <div class="p-col-3">
+                  <img class="nav_img" src="../../assets/images/icons/big-flat-screen.png">
+                </div>
+              </div> 
+
+             </div>
+            
+            
+
+          </div>
+
+          
+          <div class="divider"></div>
+     
+          <div class="collapse_content">
+            
+             <div class="router_link" (click)="searchStore('module')">
+
+              <div class="p-grid">
+                <div class="p-col-9">
+                  <h3>Module Screen</h3>
+                </div>
+                <div class="p-col-3">
+                  <img class="nav_img" src="../../assets/images/icons/tablet-screen-in-perspective.png">
+                </div>
+              </div> 
+
+             </div>
+            
+            
+
+          </div>
+
+
+     
+               </div>
+               </div>
+     
+           
+         
+    
+          <div class="divider"></div>
+         
+
+
+         
+
+          <a data-toggle="collapse" href="#access" role="button" 
+          aria-expanded="false" aria-controls="access">
+          <div>
+          <div class="p-grid content_height2">
+              <div class="p-col-9">
+                <h3>Accessaries</h3>
+              </div>
+              <div class="p-col-3">
+                 <div align="right">
+                <h3><i class="pi pi-chevron-right" ></i></h3>
+                </div>
+              </div>
+          </div>
+          </div>
+          </a>
+
+          <div class="collapse" id="access" data-parent="#accordion2">
+            <div class="collapse_body">
+
+            <div class="collapse_content">
+             
+            <div class="router_link" (click)="searchStore('bag')">
+            <div class="p-grid">
+           <div class="p-col-9">
+             <h3>Bags</h3>
+           </div>
+           <div class="p-col-3">
+             <div class="special_adjust">
+             <img class="nav_img" src="../../assets/images/icons/backpack.png">
+           </div>
+           </div>
+         </div>
+          </div>
+           
+         </div>
+
+         <div class="divider"></div>
+     
+         <div class="collapse_content">
+          
+            <div class="router_link" (click)="searchStore('mouse')">
+
+             <div class="p-grid">
+               <div class="p-col-9">
+                 <h3>Mouse</h3>
+               </div>
+               <div class="p-col-3">
+                 <img class="nav_img" src="../../assets/images/icons/mouse.png">
+               </div>
+             </div> 
+
+            </div>
+           
+            
+
+         </div>
+
+         <div class="divider"></div>
+    
+         <div class="collapse_content">
+          
+            <div class="router_link" (click)="searchStore('usb')">
+
+             <div class="p-grid">
+               <div class="p-col-9">
+                 <h3>Usb Drive</h3>
+               </div>
+               <div class="p-col-3">
+                 <img class="nav_img" src="../../assets/images/icons/usb.png">
+               </div>
+             </div> 
+
+            </div>
+           
+            
+
+         </div>
+
+         <div class="divider"></div>
+    
+         <div class="collapse_content">
+          
+            <div class="router_link" (click)="searchStore('controller')">
+
+             <div class="p-grid">
+               <div class="p-col-9">
+                 <h3>Controller</h3>
+               </div>
+               <div class="p-col-3">
+                 <img class="nav_img" src="../../assets/images/icons/controller.png">
+               </div>
+             </div> 
+
+            </div>
+           
+             
+
+         </div>
+
+          
+          <div class="divider"></div>
+          
+
+         <div class="collapse_content">
+         
+        <div class="router_link" (click)="searchStore('cable')">
+        <div class="p-grid">
+       <div class="p-col-9">
+         <h3>Cables</h3>
+       </div>
+       <div class="p-col-3">
+         <div class="special_adjust">
+         <img class="nav_img" src="../../assets/images/icons/cable.png">
+       </div>
+       </div>
+     </div>
+      </div>
+       
+     </div>
+
+         </div>
+         </div>
+
+
+
+          
+    
+           
+            <div class="divider"></div>
+          
+            <div class="padit">
+              <div class="router_link" (click)="changeInfo(0)" data-toggle="modal" data-target="#infoModal">
+              <div class="p-grid">
+                <div class="p-col-9">
+                  <h3 class="content_margin">Software</h3>
+                </div>
+                <div class="p-col-3">
+                  <div class="special_adjust">
+                    <div align="right">
+                  <img class="nav_img nav_ad" src="../../assets/images/icons/software.png">
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            
+              <div class="divider"></div>
+             >
+              <div>
+                <div class="p-grid">
+                  <div class="p-col-9">
+                    <div style="position: relative;top:.4em">
+                    <h3>Contact Us</h3>
+                    </div>
+                  </div>
+                  <div class="p-col-3">
+                    <div align="right" style="position: relative;top:.4em">
+                    <img class="nav_img nav_ad2" src="../../assets/images/icons/help.png">
+                    </div>
+                  </div>
+                 
+                  <div class="p-col-12">
+
+                    <div class="collapse_body">
+                    
+                    <div style="position: relative;top:.4em">
+                    <div class="p-grid">
+                      <div class="p-col-2">
+                        <img class="contact_us" src="../../assets/images/icons/placeholder.png">
+                      </div>
+                      <div class="p-col-10">
+                      <h4 style="font-weight:600;color:#FFF;">Focus Mega Concert</h4>
+                      <h6 style="color:#FFF;">Shop 664 Mega Plaza</h6>
+                      <h6 style="color:#FFF;">off Ojo Alaba road</h6>
+                      </div>
+                      <div class="p-col-2">
+                        <img src="../../assets/images/icons/phone.png" style="width:30px;height:30px;position:relative;left:.2em;">
+                      </div>
+                      <div class="p-col-10">
+                        <h5 style="color:#FFF;font-weight:600;position: relative;top:.3em">+2348035826579</h5>
+                      </div>
+    
+                      <div class="p-col-2">
+                        <img src="../../assets/images/icons/gmail.png" style="width:40px;height:40px;position:relative;left:.2em;">
+                      </div>
+                      <div class="p-col-10">
+                        <h5 style="color:#FFF;position: relative;top:.3em;font-weight:600;">onomzzzy@gmail.com</h5>
+                      </div>
+
+                      <div class="p-col-2">
+                        <img src="../../assets/images/icons/painting.png" style="width:45px;height:45px">
+                       
+                      </div>
+                      <div class="p-col-10">
+                        <div class="router_link" (click)="changeInfo(1)" data-toggle="modal" data-target="#infoModal" style="text-align:center;position: relative;left:-2.5em;cursor:pointer;">
+                          <h6>Created and Designed by</h6>
+                          <h4 style="font-weight:600;">O N O M E C O D E</h4>
+
+                        </div>
+                      </div>
+    
+    
+                    </div>
+                    </div>
+
+                    </div>
+    
+                  </div>
+    
+                </div>
+              </div>
+          
+    
+    
+        </div>
+       
+    
+      </div>
+
+    </div>
+  
+
+    
+
+
+
+    <!-- router -->
+<div id="main">
+  <!-- Mobile Header
+
+     <div class="mobile_header">
+       <div>
+        <div class="p-grid">
+            <div class="p-col-8">
+              <div>
+                <img class="m_logo" src="../../assets/images/icons/logo2.png">
+              </div>
+            </div>
+            <div class="p-col-4">
+              <div class="m_icon_r" align="right">
+              <div class="p-grid">
+                <div class="p-col-7">
+                  
+                    <div data-toggle="modal" data-target="#cartModal">
+                    <div style="display: inline;position: relative;top:.9em;cursor: pointer;">
+                     <img class="cart" src="../../assets/images/icons/shopping-cart.png">
+                     <span style="position:relative;top:-.8em;left:-.5em;" class="badge badge-danger">{{cart}}</span>
+                     </div>
+                    </div>
+                  
+                </div>
+                <div class="p-col-4">
+                  
+                  <div class="clickme">
+                    <div id="navcontainer" class="container"> 
+                      <div class="bar1"></div>
+                      <div class="bar2"></div>
+                      <div class="bar3"></div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              </div>
+
+            </div>
+
+        </div>
+        </div>
+
+      </div>
+
+  
+
+   <div class="modal fade" id="cartModal" tabindex="-1" role="dialog">
+    <p-toast [style]="{marginTop: '80px'}"></p-toast>
+     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+       <h5 class="modal-title">My Cart</h5>
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span arial-hidden="true">&times;</span>
+       </button>
+       </div>
+       <div class="modal-body">
+         <app-cart></app-cart>
+       </div>
+       <div *ngIf="cart > 0" class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="onClear()" data-dismiss="modal">Clear</button>
+        <button type="button" class="btn btn-primary" (click)="onBuy()" data-dismiss="modal">Buy Now ({{total | currency:'NGN':'symbol-narrow':'4.0-0'}})</button>
+       </div>
+
+     </div>
+     </div>
+
+   </div>
+
+   
+
+    
+   
+
+   <div class="modal fade" id="infoModal" tabindex="-1" role="dialog">
+     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+       <h5 class="modal-title">{{info}}</h5>
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span arial-hidden="true">&times;</span>
+       </button>
+       </div>
+       <div class="modal-body">
+         <div *ngIf="changeText"><app-team></app-team></div>
+         <div *ngIf="!changeText">
+          <div class="jumbotron">
+            <h2 class="display-5 desk_offer">NO SOFTWARE YET !!!</h2>
+            <h3 class="display-5 mobile_offer">NO SOFTWARE YET !!!</h3>
+            <p class="lead">No software for sale yet</p>
+            <hr class="my-4">
+            <p>Offer is exclusive to Focus Mall.</p>
+          </div>
+         </div>
+        
+       </div>
+       <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+       </div>
+
+     </div>
+     </div>
+
+   </div>
+
+    
+
+
+    <div *ngIf="showpreloader" class="preloader">
+      <p-progressSpinner [style]="{width: '80px', height: '80px'}" strokeWidth="8" fill="transparent" animationDuration=".5s"></p-progressSpinner>
+   </div>
+
+  
+    
+
+  
+    
+    </div>
+  
+
+
+</div>-->
+</div>

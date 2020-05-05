@@ -1,0 +1,65 @@
+.card {
+  height: 80px;
+}
+
+.card .content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+input {
+  width: 100%;
+  font-size: 16px;
+}
+
+.logo img {
+  width: 230px;
+  position: relative;
+  top: -1.91em;
+}
+
+.search {
+  position: relative;
+  top: 1em;
+}
+
+.btn {
+  background-color: #e90171;
+  font-family: "Cagliostro", sans-serif;
+  font-size: 20px;
+  color: #fff;
+}
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none;
+}
+.top-icons {
+  text-align: center;
+  position: relative;
+  top: 0.6em;
+}
+.top-icons span {
+  cursor: pointer;
+  font-size: 15px;
+  font-family: "Cagliostro", sans-serif;
+}
+
+.top-icons span:hover {
+  color: #e90171;
+}
+
+.top-icons img {
+  width: 20px;
+}
+.span_span {
+  position: relative;
+  left: -12px;
+}
+.badge {
+  border-radius: 15px;
+  padding: 5px 5px;
+  font-size: 10px !important;
+  text-align: center;
+}

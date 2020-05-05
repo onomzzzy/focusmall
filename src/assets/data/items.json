@@ -1,0 +1,601 @@
+{
+    "data": [
+        {
+        "id":"acer12340",
+        "picture":[
+        "acer_lap"
+        ],
+        "store":"Focus Mall",
+        "brand":"Acer",
+        "condition":"Used",
+        "title":"Used Acer 250 XL",
+        "search":"used acer 250 xl intel i7 processor clock speed of 2.5GHZ turbo boast of 3.0ghz 17.7 inches screen dual graphics card intel hd 4400 nvidia gtx 650m 2gb dedicated 512gb ssd 6gb ram 6 cells batery 7.5 hours life hp bag",
+        "laptop":{
+            "model":"Acer 250 XL",
+            "processorBrand":"Intel 3rd gen i7",
+            "processorSpeed":"Clock Speed 2.5GHz",
+            "screenSize":"17.7 inches Ips display",
+            "graphicsCard":[
+                "Intel HD 4400 with 128MB dedicated memory",
+                "Nvidia gtx 650M with 2GB dedicated memory"
+            ],
+            "hardDrive":[
+                "Solid State Drive",
+                "512GB Storage"
+            ],
+            "ram":"6GB DDR3 ram",
+            "battery":[
+                "6 cells lithium battery",
+                "Up to 7.5 hours life"
+            ],
+            "extra":[
+                "Hp bag inclusive"
+            ]
+        },
+        "peripheral":null,
+        "accessary":null,
+        "software":null,
+        "itemlocation":"Drawer 8",
+        "quantity":1,
+        "price": 60000,
+        "discount":0,
+        "online":false
+    },
+    {"id":"asus12340",
+        "picture":[
+        "asus_lap"
+        ],
+        "store":"Focus Mall",
+        "brand":"Asus",
+        "condition":"New",
+        "title":"New Asus Rog",
+        "search":"new asus rog with intel i9 processor speed of 2.7ghz turbo boast 3.5ghz 15.4 inches screen dual graphics card intel hd 6200 nvidia gtx 970m 4gb dedicated 512gb ssd 8gb ram 8 cells batery 8.5 hours life 32GB usb flash ",
+        "laptop":{
+            "model":"Acer Rog",
+            "processorBrand":"Intel 8th gen i9",
+            "processorSpeed":"Clock Speed 2.7GHz",
+            "screenSize":"15.4 inches Ips display",
+            "graphicsCard":[
+                "Intel HD 6200 with 512MB dedicated memory",
+                "Nvidia gtx 970M with 4GB dedicated memory"
+            ],
+            "hardDrive":[
+                "Solid State Drive",
+                "512GB Storage"
+            ],
+            "ram":"8GB DDR4 ram",
+            "battery":[
+                "8 cells lithium battery",
+                "Up to 8.5 hours life"
+            ],
+            "extra":[
+                "32GB usb flash inclusive"
+            ]
+        },
+        "peripheral":null,
+        "accessary":null,
+        "software":null,
+        "itemlocation":"Drawer 5",
+        "quantity":3,
+        "price": 260000,
+        "discount":5,
+        "online":false
+    },
+
+    {"id":"mac1230",
+        "picture":[
+        "mac_lap",
+        "mac_lap2"
+        ],
+        "store":"Focus Mall",
+        "brand":"Apple",
+        "condition":"Used",
+        "title":"Used Macbook pro",
+        "search":"used apple macbook pro with intel i7 processor  clock speed of 2.5ghz 14.5 inches screen intel hd 4400 graphics 256gb ssd 8gb ram 6 cells batery 10.5 hours life ",
+        "laptop":{
+            "model":"Macbook Pro 2013",
+            "processorBrand":"Intel 4th gen i7",
+            "processorSpeed":"Clock Speed 2.5GHz",
+            "screenSize":"14.5 inches HD Display",
+            "graphicsCard":[
+                "Intel HD 4400 with 128MB dedicated memory"
+            ],
+            "hardDrive":[
+                "Solid State Drive",
+                "265GB Storage"
+            ],
+            "ram":"6GB DDR3 ram",
+            "battery":[
+                "6 cells lithium battery",
+                "Up to 10.5 hours life"
+            ],
+            "extra":[]
+        },
+        "peripheral":null,
+        "accessary":null,
+        "software":null,
+        "itemlocation":"Drawer 2",
+        "quantity":1,
+        "price": 120000,
+        "discount":3,
+        "online":false
+    },
+
+    {"id":"mac12340",
+        "picture":[
+        "mac_lap3",
+        "mac_lap4"
+        ],
+        "store":"Focus Mall",
+        "brand":"Apple",
+        "condition":"New",
+        "title":"New Macbook pro",
+        "search":"new apple macbook pro with intel 5th gen i5 processor speed 2.5Gghz 14.5 inches screen intel hd 5200 graphics 256gb ssd 8gb ram 6 cells batery 10.5 hours life ",
+        "laptop":{
+            "model":"Macbook Pro 2014",
+            "processorBrand":"Intel 5th gen i5",
+            "processorSpeed":"Clock Speed 2.5GHz",
+            "screenSize":"14.5 inches Ips Display",
+            "graphicsCard":[
+                "Intel HD 5200 with 128MB dedicated memory"
+            ],
+            "hardDrive":[
+                "Solid State Drive",
+                "265GB Storage"
+            ],
+            "ram":"6GB DDR3 ram",
+            "battery":[
+                "6 cells lithium battery",
+                "Up to 10.5 hours life"
+            ],
+            "extra":[]
+        },
+        "peripheral":null,
+        "accessary":null,
+        "software":null,
+        "itemlocation":"Drawer 2",
+        "quantity":1,
+        "price": 150000,
+        "discount":0,
+        "online":false
+    },
+
+    {
+    "id":"batt123",
+    "picture":[
+        "bat",
+        "bat4"
+    ],
+    "store":"Focus Mall",
+    "brand":"Dell",
+    "condition":"Used",
+    "title":"Used Dell Battery",
+    "search":"used dell battery dell xps alienware 6 lithium cells",
+    "laptop":null,
+    "peripheral":{
+        "battery":{
+            "cell":"6 lithium cells"
+        },
+    "hardDrive":null,
+    "screen":null,
+    "keyboard":null,
+    "charger":null,
+    "graphicsCard":null,
+    "processor":null,
+    "motherBoard":null,
+    "uses":"for dell xps, alienware 14x and dell 250 series"
+    },
+    "accessary":null,
+    "software":null,
+    "itemlocation":"Drawer 12",
+    "quantity":4,
+    "price":5000,
+    "discount":5,
+    "online":true
+    },
+
+    {
+        "id":"bat1230",
+        "picture":[
+            "bat2",
+            "bat3"
+        ],
+        "store":"Focus Mall",
+        "brand":"Hp",
+        "condition":"New",
+        "title":"New Hp Battery",
+        "search":"new hp elitebook battery g1 g2 g3 6 lithium cells",
+        "laptop":null,
+        "peripheral":{
+            "battery":{
+                "cell":"6 lithium cells"
+            },
+        "hardDrive":null,
+        "screen":null,
+        "keyboard":null,
+        "charger":null,
+        "graphicsCard":null,
+        "processor":null,
+        "motherBoard":null,
+        "uses":"for Elitebook G1, G2 and G3"
+        },
+        "accessary":null,
+        "software":null,
+        "itemlocation":"Drawer 12",
+        "quantity":2,
+        "price":6000,
+        "discount":0,
+        "online":true
+        },
+
+        {
+            "id":"key1230",
+            "picture":[
+                "key3",
+                "key2"
+            ],
+            "store":"Focus Mall",
+            "brand":"Logiteck",
+            "condition":"New",
+            "title":"New Logiteck Keyboard",
+            "search":"new logiteck external keyboard general computing",
+            "laptop":null,
+            "peripheral":{
+             "battery":null,
+            "hardDrive":null,
+            "screen":null,
+            "keyboard":{"type":"External Keyboard"},
+            "charger":null,
+            "graphicsCard":null,
+            "processor":null,
+            "motherBoard":null,
+            "uses":"for basic computing "
+            },
+            "accessary":null,
+            "software":null,
+            "itemlocation":"Drawer 12",
+            "quantity":8,
+            "price":2000,
+            "discount":0,
+            "online":true
+            },
+            {
+                "id":"key12340",
+                "picture":[
+                    "lenovo_lap2"
+                ],
+                "store":"Focus Mall",
+                "brand":"Lenovo",
+                "condition":"Used",
+                "title":"Used Lenovo Keyboard",
+                "search":"used lenovo keyboard thicker pad x1 ",
+                "laptop":null,
+                "peripheral":{
+                "battery":null,
+                "hardDrive":null,
+                "screen":null,
+                "keyboard":{"type":"Internal Keyboard"},
+                "charger":null,
+                "graphicsCard":null,
+                "processor":null,
+                "motherBoard":null,
+                "uses":"for Thicker Pad X1"
+                },
+                "accessary":null,
+                "software":null,
+                "itemlocation":"Drawer 12",
+                "quantity":2,
+                "price":6000,
+                "discount":0,
+                "online":true
+                },
+
+                {
+                    "id":"charg1340",
+                    "picture":[
+                        "char3",
+                        "char4"
+                    ],
+                    "store":"Focus Mall",
+                    "brand":"Apple",
+                    "condition":"New",
+                    "title":"New Apple Charger",
+                    "search":"new apple charger 19.5V 4.3A 130W macbook pro 2010 2016 ",
+                    "laptop":null,
+                    "peripheral":{
+                    "battery":null,
+                    "hardDrive":null,
+                    "screen":null,
+                    "keyboard":null,
+                    "charger":{
+                        "voltage":"19.5V",
+                        "current":"4.3A",
+                        "power":"130 Walts"
+                    },
+                    "graphicsCard":null,
+                    "processor":null,
+                    "motherBoard":null,
+                    "uses":"for Mackbook pro from 2010 to 2015 Edition"
+                    },
+                    "accessary":null,
+                    "software":null,
+                    "itemlocation":"Drawer 10",
+                    "quantity":5,
+                    "price":8000,
+                    "discount":4,
+                    "online":true
+                    },
+
+                    {
+                        "id":"charg12110",
+                        "picture":[
+                            "char2",
+                            "char"
+                        ],
+                        "store":"Focus Mall",
+                        "brand":"Dell",
+                        "condition":"Used",
+                        "title":"Used Dell Charger",
+                        "search":"used dell charger 19.5V 6.3A 200W  dell inspiron xps alienware",
+                        "laptop":null,
+                        "peripheral":{
+                        "battery":null,
+                        "hardDrive":null,
+                        "screen":null,
+                        "keyboard":null,
+                        "charger":{
+                            "voltage":"19.5V",
+                            "current":"6.3A",
+                            "power":"200 Walts"
+                        },
+                        "graphicsCard":null,
+                        "processor":null,
+                        "motherBoard":null,
+                        "uses":"for Dell Inspiron, XPS and Alienware 14"
+                        },
+                        "accessary":null,
+                        "software":null,
+                        "itemlocation":"Drawer 10",
+                        "quantity":8,
+                        "price":5500,
+                        "discount":15,
+                        "online":true
+                        },
+
+                        {
+                            "id":"hd114112",
+                            "picture":[
+                                "ssd",
+                                "ssd2"
+                            ],
+                            "store":"Focus Mall",
+                            "brand":"SanDisk",
+                            "condition":"New",
+                            "title":"New SanDisk SSD",
+                            "search":"new sandisk solid state drive ssd 120gb storage",
+                            "laptop":null,
+                            "peripheral":{
+                            "battery":null,
+                            "hardDrive":{
+                                "type":"Solid State Drive(SSD)",
+                                "size":"120GB"
+                            },
+                            "screen":null,
+                            "keyboard":null,
+                            "charger":null,
+                            "graphicsCard":null,
+                            "processor":null,
+                            "motherBoard":null,
+                            "uses":"for Fast Storage"
+                            },
+                            "accessary":null,
+                            "software":null,
+                            "itemlocation":"Drawer 3",
+                            "quantity":13,
+                            "price":12000,
+                            "discount":1,
+                            "online":true
+                            },
+
+                            {
+                                "id":"screen104160",
+                                "picture":[
+                                    "scr"
+                                ],
+                                "store":"Focus Mall",
+                                "brand":"Hp",
+                                "condition":"Used",
+                                "title":"Used Hp Screen",
+                                "search":"used hp paper screen elitebook pavillion dv6000",
+                                "laptop":null,
+                                "peripheral":{
+                                "battery":null,
+                                "hardDrive":null,
+                                "screen":{
+                                    "size":"14.0 inches",
+                                    "type":"Paper Screen"
+                                },
+                                "keyboard":null,
+                                "charger":null,
+                                "graphicsCard":null,
+                                "processor":null,
+                                "motherBoard":null,
+                                "uses":"for elitebook, pavillion and dv6000"
+                                },
+                                "accessary":null,
+                                "software":null,
+                                "itemlocation":"Drawer 11",
+                                "quantity":5,
+                                "price":12000,
+                                "discount":8,
+                                "online":true
+                                },
+
+                                {
+                                    "id":"bag10070",
+                                    "picture":[
+                                        "bag2",
+                                        "bag",
+                                        "bag3"
+                                    ],
+                                    "store":"Focus Mall",
+                                    "brand":"Hp",
+                                    "condition":"New",
+                                    "title":"New Hp Bag",
+                                    "search":"new hp bag backpack laptop size",
+                                    "laptop":null,
+                                    "peripheral":null,
+                                    "accessary":{
+                                        "bag":{"size":"Large Bag"},
+                                        "cable":null,
+                                        "flashDrive":null,
+                                        "enclosure":null,
+                                        "mouse":null,
+                                        "uses":"for carrage of laptop "
+                                    },
+                                    "software":null,
+                                    "itemlocation":"Drawer 4",
+                                    "quantity":25,
+                                    "price":8000,
+                                    "discount":18,
+                                    "online":true
+                                    },
+
+                                    {
+                                        "id":"cable102173",
+                                        "picture":[
+                                            "cab2",
+                                            "cab3",
+                                            "cab4",
+                                            "cab5"
+                                        ],
+                                        "store":"Focus Mall",
+                                        "brand":"Unknown",
+                                        "condition":"New",
+                                        "title":"New Charger Cable",
+                                        "search":"new unknown charger cable laptop charger speakers headset",
+                                        "laptop":null,
+                                        "peripheral":null,
+                                        "accessary":{
+                                            "bag":null,
+                                            "cable":{
+                                                "type":"Charger cable",
+                                                "size":"Short"
+                                            },
+                                            "flashDrive":null,
+                                            "enclosure":null,
+                                            "mouse":null,
+                                            "uses":"for laptop charger, speakers and headset "
+                                        },
+                                        "software":null,
+                                        "itemlocation":"Drawer 6",
+                                        "quantity":125,
+                                        "price":1500,
+                                        "discount":1,
+                                        "online":true
+                                        },
+
+                                        {"id":"hp11207",
+                                            "picture":[
+                                            "hp_lap",
+                                            "hp_lap2",
+                                            "hp_lap5",
+                                            "hp_lap6"
+                                            ],
+                                            "store":"Focus Mall",
+                                            "brand":"Hp",
+                                            "condition":"New",
+                                            "title":"New Hp Envy X360",
+                                            "search":"new hp envy x360 amd ryzen processor speed 2.0GHZ 13.5 inches screen vega 8 graphics 1gb dedicated 256gb ssd 8gb ddr4 ram 6 cells batery 10.5 hours life ",
+                                            "laptop":{
+                                                "model":"Hp Envy X360",
+                                                "processorBrand":"Amd 3th gen Ryzen",
+                                                "processorSpeed":"Clock Speed 2.0GHz",
+                                                "screenSize":"13.5 inches Ips Display",
+                                                "graphicsCard":[
+                                                    "Amd Vega 8 with 1GB Dedicated memory"
+                                                ],
+                                                "hardDrive":[
+                                                    "Solid State Drive",
+                                                    "265GB Storage"
+                                                ],
+                                                "ram":"8GB DDR4 ram",
+                                                "battery":[
+                                                    "6 cells lithium battery",
+                                                    "Up to 10.5 hours life"
+                                                ],
+                                                "extra":[]
+                                            },
+                                            "peripheral":null,
+                                            "accessary":null,
+                                            "software":null,
+                                            "itemlocation":"Drawer 3",
+                                            "quantity":5,
+                                            "price": 180000,
+                                            "discount":3,
+                                            "online":false
+                                        },
+
+                                        
+                                {
+                                    "id":"soft10570",
+                                    "picture":[
+                                        "soft3",
+                                        "soft4"
+                                    ],
+                                    "store":"Focus Mall",
+                                    "brand":"Microsoft",
+                                    "condition":"New",
+                                    "title":"New Microsoft Windows 10",
+                                    "search":"new microsoft windows 10 enterprice education licensed",
+                                    "laptop":null,
+                                    "peripheral":null,
+                                    "accessary":null,
+                                    "software":{
+                                        "type":"Operating System",
+                                        "name":"Activated Windows 10 Enterprice",
+                                        "uses":"for laptops ,desktops ,macbooks "
+                                    },
+                                    "itemlocation":"Drawer 4",
+                                    "quantity":4,
+                                    "price":32000,
+                                    "discount":0,
+                                    "online":true
+                                    },
+
+                                    {
+                                        "id":"soft15580",
+                                        "picture":[
+                                            "soft"
+                                        ],
+                                        "store":"Focus Mall",
+                                        "brand":"Kaspersky",
+                                        "condition":"New",
+                                        "title":"New Kaspaersky Antivirus",
+                                        "search":"new kaspersky antivirus internet security windows operating system os",
+                                        "laptop":null,
+                                        "peripheral":null,
+                                        "accessary":null,
+                                        "software":{
+                                            "type":"Internet Security",
+                                            "name":"Kaspersky Antivirus",
+                                            "uses":"for laptops ,desktops ,macbooks with Windows operating system(os)"
+                                        },
+                                        "itemlocation":"Drawer 4",
+                                        "quantity":4,
+                                        "price":48000,
+                                        "discount":5,
+                                        "online":true
+                                        }
+                        
+                    
+
+
+                    
+                
+        
+    
+
+    
+            ]
+}

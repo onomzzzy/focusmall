@@ -1,0 +1,72 @@
+<div *ngIf="discounted && discounted.length > 0" class="push_color_bar">
+  <div class="color_bar">
+    <h4>Flash Deals</h4>
+  </div>
+</div>
+<div class="content-section implementation carousel-demo">
+  <p-carousel
+    *ngIf="discounted && discounted.length > 0"
+    [value]="discounted"
+    [numVisible]="5"
+    [numScroll]="3"
+    [circular]="false"
+    [responsiveOptions]="responsiveOptions"
+  >
+    <div class="container-fluid">
+      <div class="row no-gutters">
+        <div class="col">
+          <ng-template let-dis pTemplate="item">
+            <div class="card" (click)="onClickItem(dis)">
+              <img class="card-img-top" src="{{ dis.picture[0] }}" alt="" />
+              <div class="card-body" style="padding: 5px; text-align: left;">
+                <h6 class="card-title" style="font-weight: 600;">
+                  {{ dis.title | shortTitle: 0 }}
+                </h6>
+                <!--Discount-->
+                <div *ngIf="dis.discount > 0">
+                  <div class="p-grid">
+                    <div class="p-col-8">
+                      <h6 class="card-text">
+                        {{
+                          dis.newprice | currency: "NGN":"symbol-narrow":"4.0-0"
+                        }}
+                      </h6>
+                      <h6
+                        class="card-text"
+                        style="text-decoration: line-through;"
+                      >
+                        {{
+                          dis.price | currency: "NGN":"symbol-narrow":"4.0-0"
+                        }}
+                      </h6>
+                    </div>
+                    <div class="p-col-4">
+                      <h5 class="card-text" style="color: red;">
+                        <i>{{ dis.discount }}%</i>
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+                <!--Discount-->
+                <!--NonDiscount
+                    <div  *ngIf="dis.discount == 0">
+                      <div>
+                       <h6>&#x20A6;{{dis.price}}</h6>
+                      </div>
+                    </div>
+                        NonDiscount-->
+                <!--Out of stock-->
+                <div *ngIf="dis.quantity == 0">
+                  <h6 class="card-text" style="color: red; font-weight: 800;">
+                    Out of Stock
+                  </h6>
+                </div>
+                <!--Out of stock-->
+              </div>
+            </div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </p-carousel>
+</div>

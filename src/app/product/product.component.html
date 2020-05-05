@@ -1,0 +1,518 @@
+<div class="page">
+
+    <!--Breadcrumb-->
+    <!--<div class="bread_crumb">
+        <p-breadcrumb (click)="onItemClick($event)" [model]="items" [home]="home"></p-breadcrumb>
+    </div>-->
+    <ul class="breadcrumb">
+        <li><a routerLink="/home/store"><i class="pi pi-home" style="position:relative;top:12px"></i></a></li>
+        <li *ngIf="!(formerPage === 'Store')"><a (click)="onBackNavigate()" >{{formerPage}}</a></li>
+        <li>Product</li>
+    </ul>
+    <!--Breadcrumb-->
+
+    <!--Top-->
+     <div class="top">
+      <div class="top-nav"><h3>{{item.title}}</h3></div>
+      <div class="divider"></div>
+     </div>
+    <!--Top-->
+
+    <!--Content-->
+    <div class="content">
+        <p-toast [style]="{marginTop: '80px'}"></p-toast>
+        <!--top_content-->
+        <div class="p-grid">
+            <div class="p-col-12">
+            <!--Min-width 1250px-->
+
+            <div class="desk_display">
+            <div class="p-grid">
+            <div class="p-col-12 p-sm-12 p-md-6">
+                
+                <div align="center" class="adjust_from_wall">
+                        <p-card [style]="{'padding': '0px'}">
+                <p-galleria [autoPlay]="false" [images]="images"></p-galleria>
+            </p-card>
+                </div>
+            
+            </div>
+
+            <div class="p-col-12 p-sm-12  p-md-6">
+                <div class="adjust_from_wall">
+                    <div class="properties"><h4>{{item.title}}</h4></div>
+                    <p-card>
+                    <div><h5>Condition : {{item.condition}}</h5></div>
+                    <div *ngIf="item.brand !=null"><h5>Brand : {{item.brand}} </h5></div>
+                    <div><h5>Qty in Stock : {{item.quantity}} </h5></div>
+                    <div> <p-dropdown [options]="quantity" (click)="onChange($event)" [(ngModel)]="selectedQuantity"></p-dropdown></div>
+                    
+                    
+                </p-card>
+
+                <div style="margin-top: 1em;">
+                 <div class="price">
+                     <h4>Price</h4>
+                 </div>
+                <p-card>
+                    <!--Discount-->
+                    <div *ngIf="item.discount > 0">
+                        <div class="p-grid">
+                          <div class="p-col-8">
+                            <h3>{{item.newprice | currency:'NGN':'symbol-narrow':'4.0-0'}} </h3>
+                            <h5 style="text-decoration: line-through;">{{item.price | currency:'NGN':'symbol-narrow':'4.0-0'}}</h5>
+                          </div>
+                          <div class="p-col-4">
+                            <h1 style="color: red;"><i>{{item.discount}}%</i></h1>
+                          </div>
+                        </div>
+                       </div>
+                       <!--Discount-->
+                       <!--NonDiscount-->
+                       <div  *ngIf="item.discount == 0">
+                        <div style="height:20px;"></div> 
+                        <div>
+                          <h2 style="font-weight:600;">{{item.price | currency:'NGN':'symbol-narrow':'4.0-0'}}</h2>
+                         </div>
+                         <div style="height:50px;"></div>
+                       </div>
+                           <!--NonDiscount-->
+                           <!--Out of stock-->
+                           <div *ngIf="item.quantity == 0">
+                            <h4 style="color:red;font-weight:800;">Out of Stock !</h4>
+                           </div>
+                            <!--Out of stock-->
+                </p-card>
+            </div>
+
+            <div class="cart">  
+                <div class="p-grid">
+                    <div class="p-col-12 p-md-3 p-lg-4">
+
+                    </div>
+                    <div class="p-col-12 p-md-9 p-lg-8">
+                        <div>
+                        <button class="button_cart" (click)="onAddCart(item.id)" icon="pi pi-shopping-cart" iconPos="right" pButton type="button" label="Add To Cart"></button>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+                </div>
+
+            </div>
+            </div>
+        </div>
+
+            <!--Min-width 1250px-->
+
+            <!--Max-width 1249.9-->
+
+            <div class="mobile_display">
+                <div class="p-grid">
+                <div class="p-col-12">
+                    
+                    <div align="center" class="adjust_from_wall">
+                            <p-card [style]="{'padding': '0px'}">
+                    <p-galleria [autoPlay]="false" [images]="images"></p-galleria>
+                </p-card>
+                    </div>
+                
+                </div>
+    
+                <div class="p-col-12">
+                    <div class="adjust_from_wall">
+                        <div class="properties"><h4>{{item.title}}</h4></div>
+                        <p-card>
+                        <div><h5>Condition : {{item.condition}}</h5></div>
+                        <div *ngIf="item.brand !=null"><h5>Brand : {{item.brand}}</h5></div>
+                        <div><h5>Qty in Stock : {{item.quantity}} </h5></div>
+                        <div> <p-dropdown [options]="quantity" (click)="onChange($event)" [(ngModel)]="selectedQuantity"></p-dropdown></div>
+                        
+                        
+                        
+                    </p-card>
+    
+                    <div style="margin-top: 1em;">
+                     <div class="price">
+                         <h4>Price</h4>
+                     </div>
+                    <p-card>
+                        <!--Discount-->
+                        <div *ngIf="item.discount > 0">
+                            <div class="p-grid">
+                              <div class="p-col-8">
+                                <h3>{{item.newprice | currency:'NGN':'symbol-narrow':'4.0-0'}}</h3>
+                                <h5 style="text-decoration: line-through;">{{item.price | currency:'NGN':'symbol-narrow':'4.0-0'}}</h5>
+                              </div>
+                              <div class="p-col-4">
+                                <h1 style="color: red;"><i>{{item.discount}}%</i></h1>
+                              </div>
+                            </div>
+                           </div>
+                           <!--Discount-->
+                           <!--NonDiscount-->
+                           <div  *ngIf="item.discount == 0">
+                            <div style="height:20px;"></div> 
+                            <div>
+                              <h2 style="font-weight:600;">{{item.price | currency:'NGN':'symbol-narrow':'4.0-0'}}</h2>
+                             </div>
+                             <div style="height:50px;"></div>
+                           </div>
+                               <!--NonDiscount-->
+                               <!--Out of stock-->
+                               <div *ngIf="item.quantity == 0">
+                                <h4 style="color:red;font-weight:800;">Out of Stock !</h4>
+                               </div>
+                                <!--Out of stock-->
+                    </p-card>
+                </div>
+    
+                <div class="cart">  
+                    <div class="p-grid">
+                        <div class="p-col-12 p-md-3 p-lg-4">
+    
+                        </div>
+                        <div class="p-col-12 p-md-9 p-lg-8">
+                            <div>
+                            <button class="button_cart"  icon="pi pi-shopping-cart" iconPos="right" pButton type="button" (click)="onAddCart(item.id)" label="Add To Cart"></button>
+                            </div>
+                        </div>
+    
+                    </div>
+                    
+                </div>
+                    </div>
+    
+                </div>
+                </div>
+            </div>
+
+
+            <!--Max-width 1249.9-->
+
+        </div>
+
+            <div class="p-col-12">
+                  <div class="adjust_from_wall">
+                      <div *ngIf="item.description == null">
+                    <div class="description"><h4>Product Description</h4></div>
+                    <!--<p-card>-->
+                  <!--Laptop Description-->      
+                <div>
+                    <div *ngIf="item.laptop != null">
+                        <div class="ui-g-12 ui-md-6 ui-lg-4 ui-xl-4">
+                            <div>
+                                <div class="cap"></div>
+                            </div>
+                            <p-card [style]="{width: '100%',height: '250px', border: '1px solid #b3c2ca'}">
+                              <div>
+                                  <h4 style="font-weight:600;">Processor</h4>
+                                  <div style="height:1px;background-color:#212121;"></div>
+                              </div>
+                              <div style="position:relative;top:2em">
+                                  <h6>* {{item.laptop.processor.brand}} {{item.laptop.processor.generation}} {{item.laptop.processor.model}}</h6>
+                                  <h6>* {{item.laptop.processor.core}}</h6>
+                                  <h6>* Speed: {{item.laptop.processor.speed}}</h6>
+                                  <h6 *ngIf="item.laptop.processor.turboSpeed !=null">* Turbo Speed: {{item.laptop.processor.turboSpeed}}</h6>
+                              </div>
+                            </p-card>
+                        </div>
+
+                        <div class="ui-g-12 ui-md-6 ui-lg-4 ui-xl-4">
+                            <div>
+                                <div class="cap"></div>
+                            </div>
+                            <p-card [style]="{width: '100%',height: '250px', border: '1px solid #b3c2ca'}">
+                              <div>
+                                  <h4 style="font-weight:600;">Screen Size</h4>
+                                  <div style="height:1px;background-color:#212121;"></div>
+                              </div>
+                              <div style="position:relative;top:2em">
+                                  <h6>* Screen size: {{item.laptop.screen.size}}</h6>
+                                  <h6>* Display type: {{item.laptop.screen.displaykind}} Display</h6>
+                                  <h6 *ngIf="item.laptop.screen.displaytype !=null">* Screen Type: {{item.laptop.screen.displaytype}}</h6>
+                              </div>
+                            </p-card>
+                        </div>
+
+                        <div class="ui-g-12 ui-md-6 ui-lg-4 ui-xl-4">
+                            <div>
+                                <div class="cap"></div>
+                            </div>
+                            <p-card [style]="{width: '100%',height: '250px', border: '1px solid #b3c2ca'}">
+                              <div>
+                                  <h4 style="font-weight:600;">Graphics Card</h4>
+                                  <div style="height:1px;background-color:#212121;"></div>
+                              </div>
+                              <div style="position:relative;top:2em">
+                                <h6 *ngFor="let gpu of item.laptop.graphicsCard">* {{gpu.brand}} {{gpu.model}} 
+                                    {{gpu.size}} dedicated memory with {{gpu.ram}} graphics ram</h6>
+                              </div>
+                            </p-card>
+                        </div>
+
+                        <div class="ui-g-12 ui-md-6 ui-lg-4 ui-xl-4">
+                            <div>
+                                <div class="cap"></div>
+                            </div>
+                            <p-card [style]="{width: '100%',height: '250px', border: '1px solid #b3c2ca'}">
+                              <div>
+                                  <h4 style="font-weight:600;">Hard Drive</h4>
+                                  <div style="height:1px;background-color:#212121;"></div>
+                              </div>
+                              <div style="position:relative;top:2em">
+                                <h6 *ngFor="let hDrive of item.laptop.hardDrive">* {{hDrive.brand}} {{hDrive.hdtype}} {{hDrive.size}} storage </h6>
+                              </div>
+                            </p-card>
+                        </div>
+
+                        <div class="ui-g-12 ui-md-6 ui-lg-4 ui-xl-4">
+                            <div>
+                                <div class="cap"></div>
+                            </div>
+                            <p-card [style]="{width: '100%',height: '250px', border: '1px solid #b3c2ca'}">
+                              <div>
+                                  <h4 style="font-weight:600;">Ram</h4>
+                                  <div style="height:1px;background-color:#212121;"></div>
+                              </div>
+                              <div style="position:relative;top:2em">
+                                  <h6>* {{item.laptop.ram.brand}}</h6>
+                                  <h6>* {{item.laptop.ram.ramType}}</h6>
+                                  <h6>* {{item.laptop.ram.size}}</h6>
+                              </div>
+                            </p-card>
+                        </div>
+
+                        
+                        <div class="ui-g-12 ui-md-6 ui-lg-4 ui-xl-4">
+                            <div>
+                                <div class="cap"></div>
+                            </div>
+                            <p-card [style]="{width: '100%',height: '250px', border: '1px solid #b3c2ca'}">
+                              <div>
+                                  <h4 style="font-weight:600;">Battery</h4>
+                                  <div style="height:1px;background-color:#212121;"></div>
+                              </div>
+                              <div style="position:relative;top:2em">
+                                  <h6>* {{item.laptop.battery.cell}}</h6>
+                                  <h6>* power: {{item.laptop.battery.power}}</h6>
+                                  <h6>* {{item.laptop.battery.duration}}</h6>
+                              </div>
+                            </p-card>
+                        </div>
+
+                    </div>
+
+                </div>
+             <!--Laptop Description--> 
+
+             <!--Peripharals Description--> 
+             <div *ngIf="item.peripheral !=null">
+
+                <!--Ram-->
+                <div *ngIf="item.peripheral.ram !=null">
+                    <p-card>
+                        <h4>{{item.peripheral.ram.brand}} {{item.peripheral.ram.size}}
+                             {{item.peripheral.ram.ramType}} {{item.peripheral.ram.ramFor}} ram </h4>
+                    </p-card>
+                </div>        
+                <!--Ram-->
+
+                <!--MotherBoard-->
+                <div *ngIf="item.peripheral.motherBoard !=null">
+                    <p-card>
+                        <h4>{{item.peripheral.motherBoard.model}} {{item.peripheral.motherBoard.type}} motherboard </h4>
+                    </p-card>
+                </div>        
+                <!--MotherBoard-->
+
+                <!--Processor-->
+                <div *ngIf="item.peripheral.processor !=null">
+                    <p-card>
+                        <h4>
+                            {{item.peripheral.processor.brand}} {{item.peripheral.processor.generation}}
+                            {{item.peripheral.processor.core}} {{item.peripheral.processor.model}}
+                            with clock speed of {{item.peripheral.processor.speed}} and turbo speed of
+                            {{item.peripheral.processor.turboSpeed}}
+                        </h4>
+                    </p-card>
+                </div>
+                <!--Processor-->
+
+                <!--Graphics Card-->
+                <div *ngIf="item.peripheral.graphicsCard !=null">
+                    <p-card>
+                     <h4>{{item.peripheral.graphicsCard.brand}} {{item.peripheral.graphicsCard.model}} 
+                         {{item.peripheral.graphicsCard.size}} dedicated with {{item.peripheral.graphicsCard.ram}} ram </h4>
+                    </p-card>
+                    </div>
+
+                 <!--Graphics Card-->
+
+                <!--Battery-->
+                <div *ngIf="item.peripheral.battery !=null">
+                    <p-card>
+                    <h4>
+                        {{item.peripheral.battery.cell}} {{item.peripheral.battery.power}} battery for {{item.peripheral.battery.model}}</h4>
+                    </p-card>
+                </div>
+                 <!--Battery-->
+
+                 <!--KeyBoard-->
+                 <div *ngIf="item.peripheral.keyboard !=null">
+                    <p-card>
+                        <h4> {{item.condition}} {{item.peripheral.keyboard.model}} {{item.peripheral.keyboard.keyboardtype}} keyboard</h4>
+                        </p-card>
+                 </div>
+
+                 <!--KeyBoard-->
+
+                 <!--Charger-->
+                  
+                 <div *ngIf="item.peripheral.charger !=null">
+                    <p-card>
+                        <h4> {{item.condition}} {{item.brand}} charger with {{item.peripheral.charger.voltage}}, {{item.peripheral.charger.current}} and {{item.peripheral.charger.power}} power</h4>
+                        </p-card>
+                 </div>
+
+                 <!--Charger-->
+
+                 <!--Hard Drive-->
+                 
+                 <div *ngIf="item.peripheral.hardDrive !=null">
+                    <p-card>
+                        <h4> {{item.condition}} {{item.peripheral.hardDrive.hdtype}} with {{item.peripheral.hardDrive.size}} storage </h4>
+                        </p-card>
+                 </div>
+                  
+                 <!--Hard Drive-->
+
+                 <!--Screen-->
+                 
+                 <div *ngIf="item.peripheral.screen !=null">
+                    <p-card>
+                        <h4> {{item.condition}} {{item.peripheral.screen.size}} {{item.peripheral.screen.displaytype}}
+                             screen with {{item.peripheral.screen.displaykind}} display</h4>
+                        </p-card>
+                 </div>
+                  
+                 <!--Screen-->
+
+             </div>
+              <!--Peripharals Description--> 
+
+
+              <!--Accessaries-->
+             <div *ngIf="item.accessary !=null">
+
+                 <!--Mouse-->
+                 <div *ngIf="item.accessary.mouse !=null">
+                    <p-card>
+                        <h4>{{item.brand}} {{item.accessary.mouse.speed}} {{item.accessary.mouse.mouseType}} mouse </h4>
+                    </p-card>
+                </div>        
+                <!--Mouse-->
+
+                 <!--Usb drive-->
+                 <div *ngIf="item.accessary.flashDrive !=null">
+                    <p-card>
+                        <h4>{{item.brand}} {{item.accessary.flashDrive.speed}} {{item.accessary.flashDrive.size}} flash drive </h4>
+                    </p-card>
+                </div>        
+                <!--Usb drive-->
+
+                 <!--Controller-->
+                 <div *ngIf="item.accessary.gamepad !=null">
+                    <p-card>
+                        <h4>{{item.brand}} {{item.accessary.gamepad.padType}} controller </h4>
+                    </p-card>
+                </div>        
+                <!--Controller-->
+
+                 <!--Enclosure-->
+                 <div *ngIf="item.accessary.enclosure !=null">
+                    <p-card>
+                        <h4>{{item.brand}} {{item.accessary.enclosure.enclosetype}}</h4>
+                    </p-card>
+                </div>        
+                <!--Enclosure-->
+
+                 <!--Touch Pad-->
+                 <div *ngIf="item.accessary.touchpad !=null">
+                    <p-card>
+                        <h4>Touchpad for {{item.brand}} {{item.accessary.touchpad.model}} </h4>
+                    </p-card>
+                </div>        
+                <!--Touch Pad-->
+
+              <!--Bag-->
+              <div *ngIf="item.accessary.bag !=null">
+                <p-card>
+                    <h4>{{item.condition}} {{item.brand}} {{item.accessary.bag.color}} {{item.accessary.bag.size}} </h4>
+                    </p-card>
+             </div>
+              <!--Bag-->
+
+              <!--Cable-->
+              <div *ngIf="item.accessary.cable !=null">
+                <p-card>
+                    <h4> {{item.condition}} {{item.accessary.cable.size}} {{item.accessary.cable.cabletype}} </h4>
+                    </p-card>
+             </div>
+              <!--Cable-->
+
+                </div>
+
+              <!--Accessaries-->
+
+
+              <!--Software-->
+              <div *ngIf="item.software !=null">
+                <p-card>
+                    <h4> {{item.title}} {{item.software.uses}} </h4>
+                    </p-card>
+              </div>
+              <!--Software-->
+
+           <!--</p-card>-->
+            </div>
+
+            <div *ngIf="item.description != null">
+                <div class="description"><h4>Product Description</h4></div>
+                <div>
+                    <p-card>
+                        <h5>{{item.description}}</h5>
+                    </p-card>
+                </div>
+                
+            </div>
+
+        </div>
+            </div>
+
+            
+           <!-- <div class="p-col-12">
+                <div *ngIf="item.extra !== null" class="adjust_from_wall">
+                  <div class="description"><h4>Additional Features</h4></div>
+                  <p-card>
+              <div>
+                  <h5>
+                       {{item.extra}}
+                  </h5>
+              </div>
+          </p-card>
+          </div>
+          </div>-->
+
+        </div>
+
+         <!--top_content-->
+
+    </div>
+
+    <!--Content-->
+
+</div>
+

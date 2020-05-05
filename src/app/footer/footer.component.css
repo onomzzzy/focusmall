@@ -1,0 +1,57 @@
+.footer_content .card .header {
+  background-color: #282828;
+}
+.footer_content .card .footer {
+  background-color: #323232;
+}
+
+.footer_content .card img {
+  width: 120px;
+}
+.footer_content h5,
+h6 {
+  color: #ffffff;
+}
+input {
+  width: 220px;
+}
+.input-group-append {
+  cursor: pointer;
+}
+.push_it {
+  margin-top: 10px;
+}
+.bold_text {
+  font-weight: 500;
+  text-decoration: underline;
+}
+.pay_icon {
+  width: 32px !important;
+}
+.lof {
+  float: right;
+  position: relative;
+  left: -12px;
+}
+.lof_l {
+  position: relative;
+  left: -2em;
+}
+.push_lit {
+  margin-top: 15px;
+}
+
+.pull h5 {
+  position: relative;
+  top: 0.5em;
+}
+
+.input-group-text {
+  color: #ffffff;
+  background-color: #e90171;
+  border: 0px;
+}
+
+.app .logo {
+  width: 24px !important;
+}

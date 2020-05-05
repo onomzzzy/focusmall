@@ -1,0 +1,135 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: "Cagliostro";
+  src: url(/assets/font/Cagliostro.ttf) format("truetype");
+  font-weight: 300;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label,
+input,
+.ui-button-text {
+  font-family: "Cagliostro", sans-serif !important;
+}
+
+.card-body {
+  padding: 5px;
+  text-align: left;
+}
+
+.card-img-top {
+  max-height: 130px;
+}
+
+.card_margin {
+  margin: 3px;
+}
+
+.ui-galleria {
+  width: 100% !important;
+  max-width: 700px;
+}
+.ui-carousel-dots-container {
+  display: none !important;
+}
+.ui-galleria-panel {
+  width: 100% !important;
+}
+
+.ui-dropdown-items {
+  font-family: "Cagliostro", sans-serif !important;
+}
+
+.ui-galleria-panel-wrapper {
+  width: 100% !important;
+}
+.ui-panel-images {
+  width: 100% !important;
+  max-width: 650px;
+  max-height: 450px;
+}
+.ui-galleria-filmstrip-wrapper {
+  width: 100% !important;
+  max-width: 700px;
+}
+.ui-galleria-frame-content {
+  width: 100% !important;
+  max-width: 700px;
+}
+.ui-galleria-frame-image {
+  width: 100% !important;
+  max-width: 50px;
+}
+.ui-galleria-caption {
+  width: 100% !important;
+  background-color: transparent !important;
+  height: 1px !important;
+  max-width: 700px;
+}
+::-webkit-scrollbar {
+  background: #bbb;
+  border-radius: 2px;
+  height: 6px;
+  width: 6px;
+}
+
+.color_bar {
+  background-image: linear-gradient(to right, #e90171, #e90171);
+  height: 35px;
+  width: 150px;
+  padding: 1px;
+  padding-top: 2px;
+  text-align: center;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.push_color_bar {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.color_bar h4 {
+  color: #ffffff;
+  margin: 2px;
+}
+
+.ui-carousel .ui-carousel-content .ui-carousel-item {
+  overflow: hidden;
+}
+
+::-webkit-input-placeholder {
+  /* Edge */
+  position: relative;
+  left: 0.3em;
+  font-family: "Cagliostro", sans-serif;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  position: relative;
+  left: 0.3em;
+  font-family: "Cagliostro", sans-serif;
+}
+
+::placeholder {
+  position: relative;
+  left: 0.3em;
+  font-family: "Cagliostro", sans-serif;
+}
+
+.ui-carousel .ui-carousel-content .ui-carousel-item {
+  min-height: 190px;
+}
+
+@media screen and (max-width: 768px) {
+  .page {
+    margin-top: 0.4em;
+  }
+}

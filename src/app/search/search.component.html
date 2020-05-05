@@ -1,0 +1,119 @@
+
+<div class="page">
+
+
+    <!--Store Content-->
+    <div>
+
+        <div class="p-grid">
+        <!--Filter-->
+        <div style="padding:20px" class="p-col-12">
+        <div class="filter">
+          <h5>FILTERS <i class="pi pi pi-filter"></i></h5>
+        </div>
+          <p-card>
+          <div class="filter_margin">
+         <div class="p-grid">
+         <div class="p-col-12">
+           <div class="p-grid">
+             <div class="p-col-12 p-sm-6 p-md-6 p-lg-3">
+               <div class="col_margin">
+              <span class="ui-float-label">
+                <input id="float-input" [(ngModel)]="min" type="number" size="30" pInputText> 
+                <label for="float-input">Min price</label>
+            </span>
+          </div>
+             </div>
+             <div class="p-col-12 p-sm-6 p-md-6 p-lg-3">
+               <div class="col_margin">
+              <span class="ui-float-label">
+                <input id="float-input" [(ngModel)]="max" type="number" size="30" pInputText> 
+                <label for="float-input">Max price</label>
+            </span>
+          </div>
+             </div>
+
+             <div class="p-col-12 p-sm-12 p-md-12 p-lg-6">
+               <div class="drop_lower col_margin">
+              <span class="ui-float-label">
+                <input id="float-input" [(ngModel)]="brand" type="text" size="30" pInputText> 
+                <label for="float-input">Brand name</label>
+            </span>
+          </div>
+             </div>
+
+           </div>
+
+         </div>
+         </div>
+        </div>
+        </p-card>
+
+        </div>
+
+        <!--Filter-->
+
+          <!--Search product Product-->
+  
+          <div class="p-col-12">
+
+                  <div *ngIf="searchItem.length == 0">
+                    <div class="jumbotron">
+                      <h1 class="display-5 desk_offer">No Result Found!</h1>
+                      <h3 class="display-5 mobile_offer">No Result Found!</h3>
+                      <p class="lead">No record found for {{search}}, may be your search was to direct or such item has not been uploaded yet.</p>
+                      <hr class="my-4">
+                      <p>You can try search with fewer words or letters.</p>
+                      <a class="btn btn-primary btn-lg" routerLink="/home/search"  role="button">Learn more</a>
+                    </div>
+                  </div>
+
+                  <div class="container-fluid">
+                    <div class="row no-gutters">
+                      <div *ngFor="let search of searchItem | minPrice:min | maxPrice:max | brandFilter:brand" class="col-6 col-sm-4 col-md-4 col-lg-3 d-flex">
+                        <div  (click)="onClickItem(search)" class="card mb-2">
+                          <img class="card-img-top" src="{{search.picture[0]}}"
+                            alt="">
+                          <div class="card-body" style="padding:5px;text-align:left;">
+                            <h6 class="card-title" style="font-weight: 600;">{{search.title | shortTitle:1}}</h6>
+                            <!--Discount-->
+                            <div *ngIf="search.discount > 0">
+                              <div class="p-grid">
+                                <div class="p-col-8">
+                                  <h6 class="card-text">{{search.newprice | currency:'NGN':'symbol-narrow':'4.0-0'}}</h6>
+                                  <h6  class="card-text" style="text-decoration: line-through;">{{search.price | currency:'NGN':'symbol-narrow':'4.0-0'}}</h6>
+                                </div>
+                                <div class="p-col-4">
+                                  <h5 class="card-text" style="color: red;"><i>{{search.discount}}%</i></h5>
+                                </div>
+                              </div>
+                             </div>
+                             <!--Discount-->
+                              <!--NonDiscount-->
+                              <div  *ngIf="search.discount == 0">
+                                <div>
+                                 <h6>{{search.price | currency:'NGN':'symbol-narrow':'4.0-0'}}</h6>
+                                </div>
+                              </div>
+                                  <!--NonDiscount-->
+                                 <!--Out of stock-->
+                                 <div *ngIf="search.quantity == 0">
+                                    <h6 class="card-text" style="color:red;font-weight:800;">Out of Stock</h6>
+                                 </div>
+                                  <!--Out of stock-->
+                          </div>
+                        </div>
+                      </div>
+  
+                      </div>
+             </div>
+  
+          <!--Search Product-->
+  
+  
+        </div>
+  
+      </div>
+   <!--Store Content-->
+
+</div>

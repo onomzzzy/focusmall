@@ -1,0 +1,34 @@
+input {
+  width: 100%;
+}
+
+.col_margin {
+  margin: 3px;
+}
+
+.filter {
+  background-color: #bbb;
+  height: 35px;
+  padding: 3px;
+  border-top-right-radius: 8px;
+}
+
+.filter h5 {
+  position: relative;
+  top: -2px;
+}
+.filter h5,
+i {
+  color: #f2f2f2;
+}
+.filter i {
+  position: relative;
+  top: 4px;
+}
+
+@media (min-width: 991px) {
+  .drop_lower {
+    position: relative;
+    top: 8.8px;
+  }
+}

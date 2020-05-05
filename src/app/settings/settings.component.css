@@ -1,0 +1,76 @@
+
+.ui-panel {
+    border: 1px solid #b3c2ca;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+ }
+
+.bg-image {
+    background: url("../../assets/images/carosel/radeon.png") no-repeat;
+    height: 185px;
+    width: 100%;
+    background-size: cover;
+}
+.profile-info {
+    text-align: center;
+    padding-bottom: 25px;
+    margin-top: -60px; 
+}
+.profile-info .profile-image {
+    height: 160px;
+    width: 160px; }
+
+    .profile-info .name {
+        display: block;
+        font-size: 18px;
+        font-weight: 600;
+        color: #353535; }
+
+        .profile-info i {
+            font-size: 15px;
+            color: #ABABAB;
+            margin-right: 5px; }
+
+            .profile-info span {
+                font-size: 15px;
+                color: #696969;
+                font-weight: 500;
+                font-family: 'Andika', sans-serif;
+             }
+
+                .profile-info .profile-numbers {
+                    display: inline-block;
+                    text-align: center;
+                    margin: 15px;
+                 }
+
+                    .profile-info .profile-numbers .header {
+                        display: block;
+                        color: #ABABAB;
+                        font-size: 15px;
+                        font-weight: 500;
+                        margin-top: 5px; }
+
+                        .profile-info .profile-numbers .number {
+                            display: block;
+                            color: #353535;
+                            font-size: 13px;
+                            font-weight: 500; }
+                            .form_panel{
+                                margin: 10px 0px;
+                                padding:.2em;
+                              }
+                              input{
+                                width:100%
+                              }
+                              .update_profile{
+                                background-image: linear-gradient(to right, #105079, #00c4e6);
+                                height: 40px;
+                              }
+                              .update_profile h4{
+                                  color:#FFF;
+                                  margin-left: .3em;
+                                  position: relative;
+                                  top:.1em
+                              }

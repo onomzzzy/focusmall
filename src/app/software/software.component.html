@@ -1,0 +1,128 @@
+
+
+<div class="page">
+    <p-toast [style]="{marginTop: '80px'}"></p-toast>
+    <div class="login-body">
+        <div class="login-panel ui-fluid">
+            <div class="login-panel-header">
+            <img src="../../assets/images/icons/responsive.png" alt="">
+            </div>
+            <div class="login-panel-content">
+                <form [formGroup]="userform" (ngSubmit)="onSubmit(userform.value)">
+                <div class="ui-g">
+                    <div class="ui-g-12">
+                        <h1>Upload Item(s)</h1>
+                    </div>
+                    
+                    <div class="ui-g-12">
+                        <h3>SOFTWARE</h3>
+                        <hr class="mb-4">
+                        <div class="container-fluid">
+                        <div class="row rowlar">
+                         <h6>Name</h6>   
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p-dropdown [options]="category" formControlName="category"></p-dropdown>
+                            </div>
+                            <div class="col">
+                                <p-dropdown [options]="subcategory" formControlName="subcategory"></p-dropdown>
+                            </div>    
+                            
+                            
+                        </div>
+                        <!--Description-->
+                       
+                        <div class="row">
+                            <div class="col-12">
+                                <textarea rows="5" placeholder="Description in Detials" 
+                                formControlName="description" pInputTextarea autoResize="autoResize"></textarea>  
+                            </div>
+                        </div>
+
+                        <!--Description-->
+
+
+                                 <!--Upload Sample Video-->
+
+                         <div class="row rowlar">
+                            <h6>Upload Sample Video</h6>   
+                        </div>
+
+                        <div class="row" style="text-align: center">
+                            <div class="col-12">
+                                <input type="file" style="display:none;"  (change)="onUpload($event)" #fileInput1>
+                                <div class="embed-responsive embed-responsive-16by9" (click)="fileInput1.click()">
+                                    <iframe class="embed-responsive-item" [src]="video" allowfullscreen ></iframe>
+                                  </div>
+                            </div>
+                            <div class="col-12">
+                               <!--<div>
+                                    <input type="file" style="display:none;"  (change)="onUpload($event)" #fileInput>
+                                    <button pButton type="button" label="Upload Sample Video" (click)="fileInput.click()"></button>
+                                    </div>-->
+                            </div>
+                        </div>
+
+                        <!--Upload Sample video-->
+
+                          
+                          <!--Price-->
+
+                          <div class="row rowlar">
+                            <h6>Price</h6>   
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <span class="ui-float-label">
+                                    <input id="float-input" formControlName="discount" type="number" size="30" pInputText> 
+                                    <label for="float-input">Discount</label>
+                                </span>
+                            </div>
+                            <div class="col">
+                                <span class="ui-float-label">
+                                    <input id="float-input" formControlName="quantity" type="number" size="30" pInputText> 
+                                    <label for="float-input">Quantity</label>
+                                </span>
+                            </div>
+ 
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <span class="ui-float-label">
+                                    <input id="float-input" formControlName="price" type="number" size="30" pInputText> 
+                                    <label for="float-input">Price</label>
+                                </span>
+                            </div> 
+
+                            <div class="col">
+                                <span class="ui-float-label">
+                                    <input id="float-input" formControlName="location" type="text" size="30" pInputText> 
+                                    <label for="float-input">Item Location</label>
+                                </span>
+                            </div> 
+
+                        </div>
+
+                        <!--Price-->
+
+
+
+
+                        </div>
+                       
+                    </div>
+
+                   
+                    
+                    <div class="ui-g-12">
+                    <button pButton type="submit" label="Upload" [disabled]="!userform.valid"></button>
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div></div>
+</div>
+

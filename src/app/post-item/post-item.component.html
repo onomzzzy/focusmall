@@ -1,0 +1,396 @@
+
+<div class="page">
+    <p-toast [style]="{marginTop: '80px'}"></p-toast>
+    <div class="login-body">
+        <div class="login-panel ui-fluid">
+            <div class="login-panel-header">
+            <img src="../../assets/images/icons/logo1.png" alt="">
+            </div>
+            <div class="login-panel-content">
+                <form [formGroup]="userform" (ngSubmit)="onSubmit(userform.value)">
+                <div class="ui-g">
+                    <div class="ui-g-12">
+                        <h1>Upload Item(s)</h1>
+                    </div>
+                    
+                    <div class="ui-g-12">
+                        <h3>LAPTOPS</h3>
+                        <hr class="mb-4">
+                        <div class="container-fluid">
+
+                        <div class="row rowlar">
+                         <h6>Name</h6>   
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p-dropdown [options]="brand" formControlName="brand"></p-dropdown>
+                            </div>
+                            <div class="col">
+                                <p-dropdown [options]="condition" formControlName="condition"></p-dropdown>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col" style="margin-top:12px">
+                                <span class="ui-float-label">
+                                    <input id="float-input" formControlName="model" type="text" size="30" pInputText> 
+                                    <label for="float-input">Model</label>
+                                </span>
+                            </div>
+                            
+                        </div>
+                        <!--Screen-->
+
+                        <div class="row rowlar">
+                            <h6>SCREEN</h6>   
+                           </div>
+                           <div class="row">
+                               <div class="col">
+                                   <p-dropdown [options]="screenDisplay" formControlName="screenDisplay"></p-dropdown>
+                               </div>
+                               <div class="col">
+                                   <p-dropdown [options]="screenSize" formControlName="screenSize"></p-dropdown>
+                               </div>
+                               
+                           </div>
+                           <!--Screen-->
+
+                           <!--Processor-->
+
+                        <div class="row rowlar">
+                            <h6>Processor</h6>   
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p-dropdown (click)="onChange($event)" [options]="processorBrand" formControlName="processorBrand"></p-dropdown>
+                            </div>
+                            <div class="col">
+                                <p-dropdown [options]="processorModel" formControlName="processorModel"></p-dropdown>
+                            </div>
+                            
+                            <div class="col">
+                                <p-dropdown [options]="processorGen" formControlName="processorGen"></p-dropdown>
+                            </div>
+
+                            <div class="col">
+                                <p-dropdown [options]="processorCore" formControlName="processorCore"></p-dropdown>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col" style="margin-top:12px">
+                                <span class="ui-float-label">
+                                    <input id="float-input" formControlName="processorSpeed" type="number" size="30" pInputText> 
+                                    <label for="float-input">Speed</label>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!--Processor-->
+
+
+                        <!--graphics Card-->
+
+                        <div class="row rowlar">
+                            <h6>Graphics</h6>   
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col">
+                                <p-dropdown (click)="onSelectGraphics($event)" [options]="graphics" formControlName="graphics"></p-dropdown> 
+                            </div>
+
+                            <div class="col">
+                                <p-dropdown (click)="onChangeGraphicsBrand($event,0)" [options]="graphicsBrand" formControlName="graphicsBrand"></p-dropdown>
+                            </div>
+                            <div class="col">
+                                <p-dropdown [options]="graphicsModel" formControlName="graphicsModel"></p-dropdown>
+                            </div>
+                            <div class="col">
+                                <p-dropdown [options]="graphicsMemory" formControlName="graphicsMemory"></p-dropdown>
+                            </div>
+                            <div class="col">
+                                <p-dropdown [options]="graphicsSize" formControlName="graphicsSize"></p-dropdown>
+                            </div>
+                           
+                        </div>
+
+                        <!--Graphics Card-->
+
+
+                        <!--Graphics Card 2-->
+
+                        <div *ngIf="secondGraphicsCard" class="row rowlar">
+                            <h6>Graphics 2</h6>   
+                        </div>
+
+                        <div *ngIf="secondGraphicsCard" class="row">
+
+                            <div class="col">
+                                <p-dropdown (click)="onChangeGraphicsBrand($event,1)" [options]="graphicsBrand1" formControlName="graphicsBrand1"></p-dropdown>
+                            </div>
+                            <div class="col">
+                                <p-dropdown [options]="graphicsModel1" formControlName="graphicsModel1"></p-dropdown>
+                            </div>
+                            <div class="col">
+                                <p-dropdown [options]="graphicsMemory1" formControlName="graphicsMemory1"></p-dropdown>
+                            </div>
+                            <div class="col">
+                                <p-dropdown [options]="graphicsSize1" formControlName="graphicsSize1"></p-dropdown>
+                            </div>
+                           
+                        </div>
+
+                        <!--Graphics Card 2-->
+
+
+                         <!--Hard Drive-->
+
+                         <div class="row rowlar">
+                            <h6>Hard Drive</h6>   
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                            <p-dropdown  [options]="hdNo" (click)="onHD($event)" formControlName="hdNo"></p-dropdown>
+                            </div>
+                        </div>
+
+
+                        <!--Hard Drive 0-->
+
+                        <div class="row rowlar" *ngIf="selectedHD > 0">
+                            <h6>Hard Drive 1</h6>   
+                        </div>
+
+                        <div class="row" *ngIf="selectedHD > 0">
+                            <div class="col">
+                                <p-dropdown  [options]="hdBrand" formControlName="hdBrand"></p-dropdown>
+                            </div>
+                            <div class="col">
+                                <p-dropdown [options]="hdType" formControlName="hdType"></p-dropdown>
+                            </div>
+                            <div class="col">
+                                <p-dropdown [options]="hdSize" formControlName="hdSize"></p-dropdown>
+                            </div>
+                           
+                        </div>
+
+                        <!--Hard Drive 0 -->
+
+
+                        <!--HD 1-->
+                        
+                        <div class="row rowlar" *ngIf="selectedHD > 1">
+                            <h6>Hard Drive 2</h6>   
+                        </div>
+
+                        <div class="row" *ngIf="selectedHD > 1">
+                            <div class="col">
+                                <p-dropdown  [options]="hdBrand1" formControlName="hdBrand1"></p-dropdown>
+                            </div>
+                            <div class="col">
+                                <p-dropdown [options]="hdType1" formControlName="hdType1"></p-dropdown>
+                            </div>
+                            <div class="col">
+                                <p-dropdown [options]="hdSize1" formControlName="hdSize1"></p-dropdown>
+                            </div>
+                           
+                        </div>
+
+                        <!--HD 1-->
+
+
+                        
+                        <!--HD 2-->
+                        
+                        <div class="row rowlar" *ngIf="selectedHD > 2">
+                            <h6>Hard Drive 3</h6>   
+                        </div>
+
+                        <div class="row" *ngIf="selectedHD > 2">
+                            <div class="col">
+                                <p-dropdown  [options]="hdBrand2" formControlName="hdBrand2"></p-dropdown>
+                            </div>
+                            <div class="col">
+                                <p-dropdown [options]="hdType2" formControlName="hdType2"></p-dropdown>
+                            </div>
+                            <div class="col">
+                                <p-dropdown [options]="hdSize2" formControlName="hdSize2"></p-dropdown>
+                            </div>
+                           
+                        </div>
+
+                        <!--HD 2-->
+
+
+                        
+                        <!--HD 3-->
+
+                        <div class="row rowlar" *ngIf="selectedHD > 3">
+                            <h6>Hard Drive 4</h6>   
+                        </div>
+
+                        <div class="row" *ngIf="selectedHD > 3">
+                            <div class="col">
+                                <p-dropdown  [options]="hdBrand3" formControlName="hdBrand3"></p-dropdown>
+                            </div>
+                            <div class="col">
+                                <p-dropdown [options]="hdType3" formControlName="hdType3"></p-dropdown>
+                            </div>
+                            <div class="col">
+                                <p-dropdown [options]="hdSize3" formControlName="hdSize3"></p-dropdown>
+                            </div>
+                           
+                        </div>
+
+                        <!--HD 3-->
+
+                        <!--Hard Drive-->
+
+                         <!--Ram-->
+
+                         <div class="row rowlar">
+                            <h6>Ram</h6>   
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <p-dropdown  [options]="ramBrand" formControlName="ramBrand"></p-dropdown>
+                            </div>
+                            <div class="col">
+                                <p-dropdown [options]="ramType" formControlName="ramType"></p-dropdown>
+                            </div>
+                            <div class="col">
+                                <p-dropdown [options]="ramSize" formControlName="ramSize"></p-dropdown>
+                            </div>
+                           
+                        </div>
+
+                        <!--Ram-->
+
+                        <!--Battery-->
+
+                        <div class="row rowlar">
+                            <h6>Battery</h6>   
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <p-dropdown  [options]="cells" formControlName="cells"></p-dropdown>
+                            </div>
+                            <div class="col">
+                                <span class="ui-float-label">
+                                    <input id="float-input" formControlName="power" type="textr" size="30" pInputText> 
+                                    <label for="float-input">Power</label>
+                                </span>
+                            </div>
+                            <div class="col">
+                                <span class="ui-float-label">
+                                    <input id="float-input" formControlName="duration" type="text" size="30" pInputText> 
+                                    <label for="float-input">Duration</label>
+                                </span>
+                            </div> 
+                           
+                        </div>
+
+                        <!--Battery-->
+
+
+                         <!--Auto Description-->
+                         <div class="row rowlar">
+                            <h6 style="margin-right:5px;">Auto Description</h6> 
+                            <p-inputSwitch (onChange)="handleChange($event)"></p-inputSwitch>  
+                        </div>
+                        <div *ngIf="!autoDes" class="row">
+                            <div class="col-12">
+                                <textarea rows="5" placeholder="Description in Detials" formControlName="description" pInputTextarea autoResize="autoResize"></textarea>  
+                            </div>
+                        </div>
+
+                        <!--Auto Description-->
+
+
+                         <!--Upload Pictures-->
+
+                         <div class="row rowlar">
+                            <h6>Upload Pictures</h6>   
+                        </div>
+
+                        <div class="row" style="text-align: center">
+                            <div class="col">
+                                <input type="file" style="display:none;"  (change)="onUpload($event,0)" #fileInput>
+                                <img class="upload-image" src="{{pix}}" (click)="fileInput.click()">
+                            </div>
+                            <div class="col">
+                                    <input type="file" style="display:none;"  (change)="onUpload($event,1)" #fileInput1>
+                                    <img class="upload-image" src="{{pix1}}"
+                                    (click)="fileInput1.click()">
+                            </div>
+                           <div class="col">
+                                <input type="file" style="display:none;"  (change)="onUpload($event,2)" #fileInput2>
+                                    <img class="upload-image" src="{{pix2}}"
+                                    (click)="fileInput2.click()">
+                            </div>
+
+                            <div class="col">
+                                <input type="file" style="display:none;"  (change)="onUpload($event,3)" #fileInput3>
+                                    <img  src="{{pix3}}" class="upload-image" (click)="fileInput3.click()">
+                            </div>   
+                           
+                        </div>
+
+                        <!--Upload Pictures-->
+
+                          <!--Price-->
+
+                          <div class="row rowlar">
+                            <h6>Price</h6>   
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <span class="ui-float-label">
+                                    <input id="float-input" formControlName="discount" type="number" size="30" pInputText> 
+                                    <label for="float-input">Discount</label>
+                                </span>
+                            </div>
+                            <div class="col">
+                                <span class="ui-float-label">
+                                    <input id="float-input" formControlName="quantity" type="number" size="30" pInputText> 
+                                    <label for="float-input">Quantity</label>
+                                </span>
+                            </div>
+ 
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <span class="ui-float-label">
+                                    <input id="float-input" formControlName="price" type="number" size="30" pInputText> 
+                                    <label for="float-input">Price</label>
+                                </span>
+                            </div> 
+
+                            <div class="col">
+                                <span class="ui-float-label">
+                                    <input id="float-input" formControlName="location" type="text" size="30" pInputText> 
+                                    <label for="float-input">Item Location</label>
+                                </span>
+                            </div> 
+
+                        </div>
+
+                        <!--Price-->
+
+
+
+                        </div>
+                       
+                    </div>
+                    
+                    <div class="ui-g-12">
+                    <button pButton type="submit" label="Upload" [disabled]="!userform.valid"></button>
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div></div>
+</div>

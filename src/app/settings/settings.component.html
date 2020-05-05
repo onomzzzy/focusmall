@@ -1,0 +1,143 @@
+<div>
+     <!--Settings-->
+        
+     <div class="p-grid">
+        <div class="p-col-12">
+            <div class="ui-panel ">
+            <div class="bg-image">
+            </div>
+            <div class="profile-info">
+                <input type="file" style="display:  none;"  (change)="onUpload($event)" #fileInput>
+                <img class="profile-image" src="{{user.pix}}"
+                (click)="fileInput.click()">  
+
+                <span class="name">{{user.firstname}} {{user.lastname}}</span>
+                <div>
+                    <i class="pi pi-user"></i>
+                    <span class="job">{{user.username}}</span>
+                </div>
+                <div>
+                    <i class="pi pi-map-marker"></i>
+                    <span class="location">{{user.address}}</span>
+                </div>
+                <div>
+                    <div class="profile-numbers">
+                        <span class="header">phoneno</span>
+                        <span class="number">{{user.phoneno}}</span>
+                    </div>
+                    <div class="profile-numbers">
+                        <span class="header">whatsapp</span>
+                        <span class="number">{{user.whatsapp}}</span>
+                    </div>
+
+        </div>
+        </div>
+    </div>
+        </div>
+
+        <!--<div class="p-col-12 p-sm-6 p-md-6 p-lg-6">
+
+            <div class="p-grid">
+                
+
+                <div class="p-col-12">
+                 
+                    <div>
+                        <div class="update_profile">
+                            <h4>Update Profile</h4>
+                        </div>
+                      <p-card>
+                                <div class="content-section implementation">
+                                        <form [formGroup]="userform" (ngSubmit)="onSubmit(userform.value)">
+                                                <p-toast [style]="{marginTop: '80px'}"></p-toast>
+                                                <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid form_panel">
+                                                    
+                                                    <div class="ui-grid-row">
+                                                        <div class="ui-grid-col-12 ui-grid-md-6">
+                                                            <input pInputText type="text" formControlName="phonenumber" placeholder="Phone Number"/>
+                                                        </div>
+                                                            <div class="ui-grid-col-12 ui-grid-md-6">
+                                                                <input pInputText type="text" formControlName="whatsapp" placeholder="Whats-app Number"/>
+                                                            </div>
+                                                            
+                                                        </div>
+
+                                                    <div class="ui-grid-row">
+                                                        <div class="ui-grid-col-12">
+                                                            <div style="margin-top:.8em;">
+                                                            <div class="input_margin">
+                                                                <span class="ui-float-label">
+                                                                    <textarea id="float-input" formControlName="message" rows="6" cols="30" pInputTextarea></textarea>
+                                                                    <label for="float-input">Shipping Address</label>
+                                                                </span>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="ui-grid-row">
+                                                        <div class="ui-grid-col-12">
+                                                            <button pButton type="submit" label="Update" [disabled]="!userform.valid"></button>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                </div>
+                                        </form>
+                                    </div>
+                        </p-card>
+                    </div>
+        
+
+                </div>
+
+
+
+                <div class="p-col-12">
+
+                    <div>
+                        <div class="update_profile">
+                            <h4>Change Password</h4>
+                        </div>
+                        <p-card>
+                                <div class="content-section implementation">
+                                        <form [formGroup]="userform2" (ngSubmit)="onSubmitPassword(userform2.value)">
+                                                <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid form_panel">
+                                                    <div class="ui-grid-row">
+                                                        <div class="ui-grid-col-12">
+                                                            <input pInputText type="password" formControlName="oldpassword" placeholder="Old Password"/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ui-grid-row">
+                                                        <div class="ui-grid-col-12 ui-grid-md-6">
+                                                            <input pInputText type="password" formControlName="password" placeholder=" New Password Min(6)"/>
+                                                        </div>
+                                                        <div class="ui-grid-col-12 ui-grid-md-6">
+                                                            <input pInputText type="password" formControlName="confirmpassword" placeholder="Confirm Password"/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ui-grid-row">
+                                                        
+                                                        <div class="ui-grid-col-12">
+                                                            <button pButton type="submit" label="Change" [disabled]="!userform2.valid"></button>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                </div>
+                                        </form>
+                                    </div>
+                        </p-card>
+                    </div>
+
+                </div>
+
+              
+
+            </div>
+
+            
+
+            </div>-->
+    </div>
+
+     <!--Settings-->
+</div>

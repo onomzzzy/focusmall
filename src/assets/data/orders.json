@@ -1,0 +1,113 @@
+{
+    "data": [
+
+
+        {
+
+            "id":"oder0067"  ,  
+            "item":{
+                
+                    "id":"soft15580",
+                    "picture":[
+                        "soft"
+                    ],
+                    "store":"Focus Mall",
+                    "brand":"Kaspersky",
+                    "condition":"New",
+                    "title":"New Kaspaersky Antivirus",
+                    "search":"new kaspersky antivirus internet security windows operating system os",
+                    "laptop":null,
+                    "peripheral":null,
+                    "accessary":null,
+                    "software":{
+                        "type":"Internet Security",
+                        "name":"Kaspersky Antivirus",
+                        "uses":"for laptops ,desktops ,macbooks with Windows operating system(os)"
+                    },
+                    "itemlocation":"Drawer 4",
+                    "quantity":4,
+                    "price":48000,
+                    "discount":5,
+                    "online":true
+                    
+
+            },
+            "buyer":{
+                "id":"samo123r45e",
+                "username":"onomzzzy@gmail.com",
+                "password":"onome12345",
+                "firstname":"Samuel",
+                "lastname":"Onome",
+                "pix":"../../assets/images/users/jesse.jpg",
+                "role":"USER",
+                "address":"20 David Street Ojo Lagos",
+                "phoneno":"09056784325",
+                "whatsapp":"08067543261" 
+            },
+            "paymentName":"Anthony Josua",
+            "purchaseTime":"03 Febrary 2020",
+             "confirmTime":"03 Feburary 2020",
+             "recievedTime":null
+        },
+
+        {
+
+            "id":"oder00690"  ,  
+            "item":{
+                
+                "id":"cable102173",
+                "picture":[
+                    "cab2",
+                    "cab3",
+                    "cab4",
+                    "cab5"
+                ],
+                "store":"Focus Mall",
+                "brand":"Unknown",
+                "condition":"New",
+                "title":"New Charger Cable",
+                "search":"new unknown charger cable laptop charger speakers headset",
+                "laptop":null,
+                "peripheral":null,
+                "accessary":{
+                    "bag":null,
+                    "cable":{
+                        "type":"Charger cable",
+                        "size":"Short"
+                    },
+                    "flashDrive":null,
+                    "enclosure":null,
+                    "mouse":null,
+                    "uses":"for laptop charger, speakers and headset "
+                },
+                "software":null,
+                "itemlocation":"Drawer 6",
+                "quantity":125,
+                "price":1500,
+                "discount":1,
+                "online":true
+                    
+
+            },
+            "buyer":{
+                "id":"samo123r45e",
+                "username":"onomzzzy@gmail.com",
+                "password":"onome12345",
+                "firstname":"Samuel",
+                "lastname":"Onome",
+                "pix":"../../assets/images/users/jesse.jpg",
+                "role":"USER",
+                "address":"20 David Street Ojo Lagos",
+                "phoneno":"09056784325",
+                "whatsapp":"08067543261" 
+            },
+            "paymentName":"Gabreal Alan",
+            "purchaseTime":null,
+             "confirmTime":null,
+             "recievedTime":null
+        }
+
+
+    ]
+
+}
